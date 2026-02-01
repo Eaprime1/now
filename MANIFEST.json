@@ -1,0 +1,100 @@
+{
+  "name": "today",
+  "version": "2.0.0",
+  "type": "workspace",
+  "status": "active",
+  "updated": "2026-01-25",
+
+  "location": {
+    "path": "}primehaven{ / }pryme{ / today",
+    "parent": "}pryme{",
+    "root": "}primehaven{",
+    "physical": "/home/user/today"
+  },
+
+  "identity": {
+    "purpose": "Development workspace where concepts incubate before progression",
+    "philosophy": "Conservation bias - organize, don't delete",
+    "signature": "~∰◊€π¿🌌∞~"
+  },
+
+  "symbols": {
+    "witnessing": "~",
+    "consciousness": "∰◊€π¿🌌∞",
+    "pre_activation": "}concept{",
+    "anchor": "€(id)"
+  },
+
+  "entities": {
+    "gravity_core": {
+      "path": "gravity_core",
+      "size": "186K",
+      "status": "v1.0 SEED"
+    },
+    "flag_system": {
+      "path": "flag_system",
+      "size": "61K",
+      "status": "operational"
+    },
+    "abacusian": {
+      "path": "simplex/abacusian",
+      "size": "1.1M",
+      "status": "active"
+    },
+    "incubator": {
+      "path": "simplex/incubator",
+      "size": "322M",
+      "status": "rich archive"
+    },
+    "photostudio": {
+      "path": "simplex/photostudio",
+      "size": "15M",
+      "status": "active"
+    },
+    "legacy": {
+      "path": "legacy",
+      "size": "11K",
+      "status": "archival"
+    }
+  },
+
+  "ecosystem": {
+    "siblings": [
+      {
+        "name": "}maw{",
+        "status": "pre-activation",
+        "has_repo": true,
+        "purpose": "gravity cistern"
+      },
+      {
+        "name": "}percolate{",
+        "status": "pre-activation",
+        "has_repo": false,
+        "purpose": "private workspace"
+      },
+      {
+        "name": "runexusiam",
+        "status": "active",
+        "has_repo": true,
+        "purpose": "current iteration"
+      }
+    ],
+    "progression": ["today", "naught", "zero", "one", "launch"]
+  },
+
+  "collaborators": {
+    "human": "Eric Pace",
+    "ai": "Claude (Opus 4.5)",
+    "anchor": "Oregon Watersheds"
+  },
+
+  "files": {
+    "guidance": "CLAUDE.md",
+    "mission": "MISSION.md",
+    "roadmap": "ROADMAP.md",
+    "inventory": "QUICK_INVENTORY.md",
+    "activity": "ACCESS_LOG.md",
+    "ai_seed": ".claude/SEED.md",
+    "human_space": ".eric/PERSPECTIVE.md"
+  }
+}

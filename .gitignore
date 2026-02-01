@@ -1,0 +1,25 @@
+redundancy_entity/beasis_catalog.json
+gravity_core_v1.0_SEED.zip
+GRAVITY_INVENTORY_v1.0.txt
+quick.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
