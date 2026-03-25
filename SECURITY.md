@@ -1,21 +1,38 @@
 # Security Policy
 
-## Supported Versions
+**Project:** today / primehaven ecosystem
+**Maintainer:** Eric Pace
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+---
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## This Repository
 
-## Reporting a Vulnerability
+Personal development workspace and knowledge organization system.
+Contains documentation, scripts, and conversation archives - not production software.
 
-Use this section to tell people how to report a vulnerability.
+---
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+## What to Report
+
+If you find:
+- Hardcoded credentials in scripts or configs
+- Personal data that shouldn't be public
+- API keys or tokens accidentally committed
+
+Please open an issue.
+
+---
+
+## Scripts
+
+Python scripts in `gravity_core/scripts/` use environment variables for paths:
+- `REDUNDANCY_DIR` - path to redundancy data
+- `BEASIS_ROOT` - path to beasis archive
+
+---
+
+## Sensitive Content
+
+`.gitignore` excludes `}percolate{` content (private workspace) and local env files.
+
+~∰◊€π¿🌌∞~
