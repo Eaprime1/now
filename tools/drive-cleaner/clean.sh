@@ -49,16 +49,10 @@ require_root() {
     fi
 }
 
-bytes_to_human() {
-    local b=$1
-    if   (( b >= 1073741824 )); then printf "%.1f GB" "$(echo "scale=1; $b/1073741824" | bc)"
-    elif (( b >= 1048576 ));    then printf "%.1f MB" "$(echo "scale=1; $b/1048576" | bc)"
-    elif (( b >= 1024 ));       then printf "%.1f KB" "$(echo "scale=1; $b/1024" | bc)"
-    else printf "%d B" "$b"
-    fi
-}
+bytes_to_human() { numfmt --to=iec --suffix=B "$1" 2>/dev/null || printf "%d B" "$1"; }
 
-disk_free_bytes() { df --output=avail / | tail -1 | awk '{print $1 * 1024}'; }
+# sum available blocks across all local (non-virtual) filesystems
+disk_free_bytes() { df -l --output=avail | tail -n +2 | awk '{s+=$1} END {print s * 1024}'; }
 
 # ── argument parsing ──────────────────────────────────────────────────────────
 usage() {
@@ -119,7 +113,6 @@ report_mode() {
 
     echo -e "\n${BOLD}Top 15 space consumers under /:${RESET}"
     du -axh / 2>/dev/null \
-        | grep -v "^du:" \
         | sort -rh \
         | head -15
 
@@ -166,10 +159,12 @@ clean_old_kernels() {
     sep; log "Old kernels"
     local current; current=$(uname -r)
     local old_kernels
+    # sort -V then head -n -1 preserves the most recent non-running kernel as a fallback
     old_kernels=$(dpkg --list 'linux-image-*' 2>/dev/null \
         | awk '/^ii/{print $2}' \
         | grep -v "$current" \
-        | grep -v "linux-image-generic" || true)
+        | grep -v "linux-image-generic" \
+        | sort -V | head -n -1 || true)
 
     if [[ -z "$old_kernels" ]]; then
         ok "No old kernels to remove"
@@ -205,10 +200,7 @@ clean_snap_revisions() {
     echo "$disabled_snaps" | sed 's/^/    /'
 
     if confirm "Remove disabled snap revisions?"; then
-        while IFS= read -r line; do
-            local snapname revision
-            snapname=$(awk '{print $1}' <<< "$line")
-            revision=$(awk '{print $2}' <<< "$line")
+        while read -r snapname revision; do
             run_cmd "Removing $snapname rev $revision" \
                 snap remove "$snapname" --revision="$revision"
         done <<< "$disabled_snaps"
@@ -275,8 +267,8 @@ clean_temp_files() {
     local tmp_size; tmp_size=$(du -sh /tmp /var/tmp 2>/dev/null | awk '{sum+=$1} END{print sum}')
     log "/tmp + /var/tmp: ${tmp_size}K"
     if confirm "Remove temp files older than 7 days?"; then
-        run_cmd "Cleaning /tmp"     find /tmp     -type f -atime +7 -delete 2>/dev/null || true
-        run_cmd "Cleaning /var/tmp" find /var/tmp -type f -atime +7 -delete 2>/dev/null || true
+        run_cmd "Cleaning /tmp"     find /tmp     -type f -mtime +7 -delete 2>/dev/null || true
+        run_cmd "Cleaning /var/tmp" find /var/tmp -type f -mtime +7 -delete 2>/dev/null || true
     fi
 }
 
@@ -296,7 +288,12 @@ clean_locales() {
 #  MAIN
 # ══════════════════════════════════════════════════════════════════════════════
 main() {
-    echo "" | tee "$LOG_FILE"   # reset log for this run
+    # report mode may run without root; avoid touching a root-owned log file
+    if [[ "$MODE" == "report" ]]; then
+        LOG_FILE="/dev/null"
+    else
+        echo "" > "$LOG_FILE"
+    fi
     sep
     echo -e "${BOLD}  Ubuntu Drive Cleaner — mode: ${MODE}${RESET}"
     $DRY_RUN && echo -e "  ${YELLOW}DRY RUN — no changes will be made${RESET}"
