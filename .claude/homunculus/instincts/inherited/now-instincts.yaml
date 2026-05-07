@@ -97,12 +97,12 @@ source_repo: https://github.com/Eaprime1/now
 
 ## Action
 
-Place tests in the tests/ or __tests__/ directory, mirroring src structure
+Keep tests separate from implementation files and follow the repository's existing test layout
 
 ## Evidence
 
-- Separate test directory pattern detected
-- Tests live in dedicated test folders
+- Testing files should not be assumed to live under tests/ or __tests__/ in this repository
+- Follow the current project structure when adding or updating tests
 
 ---
 id: now-instinct-file-naming-camelcase
