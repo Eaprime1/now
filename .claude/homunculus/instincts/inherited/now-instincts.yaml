@@ -37,12 +37,12 @@ source_repo: https://github.com/Eaprime1/now
 
 ## Action
 
-Use camelCase naming convention
+Use snake_case naming convention for Python modules/scripts, and follow existing repository conventions for other file types
 
 ## Evidence
 
 - Analyzed file naming patterns in repository
-- Dominant pattern: camelCase
+- Dominant pattern for Python modules/scripts: snake_case
 
 ---
 id: now-import-relative
