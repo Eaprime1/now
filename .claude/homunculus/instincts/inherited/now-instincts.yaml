@@ -105,25 +105,6 @@ Keep tests separate from implementation files and follow the repository's existi
 - Follow the current project structure when adding or updating tests
 
 ---
-id: now-instinct-file-naming-camelcase
-trigger: "When creating a new file"
-confidence: 0.8
-domain: code-style
-source: repo-analysis
-source_repo: Eaprime1/now
----
-
-# Now Instinct File Naming Camelcase
-
-## Action
-
-Name the file using camelCase
-
-## Evidence
-
-- Pattern in namingConventions.files
-
----
 id: now-instinct-function-naming-camelcase
 trigger: "When defining a new function"
 confidence: 0.9
