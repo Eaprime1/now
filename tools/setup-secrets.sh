@@ -62,14 +62,36 @@ fi
 
 log "Found ${#KEYS[@]} key(s) in clavis.txt: ${!KEYS[*]}"
 
+# ── serialise keys as JSON and pass via env var (avoids shell injection) ───────
+KEYS_JSON=$(python3 -c "
+import json, sys
+
+keys = {}
+with open('$CLAVIS') as f:
+    for line in f:
+        line = line.strip()
+        if not line or line.startswith('#') or '=' not in line:
+            continue
+        k, _, v = line.partition('=')
+        keys[k.strip()] = v.strip()
+
+print(json.dumps(keys))
+")
+
 # ── add secrets via GitHub API using python3 ──────────────────────────────────
-python3 <<PYEOF
-import json, base64, urllib.request, urllib.error, sys
+GITHUB_TOKEN="$GITHUB_TOKEN" \
+REPO_OWNER="$REPO_OWNER" \
+REPO_NAME="$REPO_NAME" \
+KEYS_JSON="$KEYS_JSON" \
+python3 <<'PYEOF'
+import json, base64, os, urllib.request, urllib.error, sys
 from urllib.request import Request
 
-token = "$GITHUB_TOKEN"
-owner = "$REPO_OWNER"
-repo  = "$REPO_NAME"
+token = os.environ['GITHUB_TOKEN']
+owner = os.environ['REPO_OWNER']
+repo  = os.environ['REPO_NAME']
+keys  = json.loads(os.environ['KEYS_JSON'])   # safe: parsed from JSON, no shell interpolation
+
 headers = {
     "Authorization": f"Bearer {token}",
     "Accept": "application/vnd.github+json",
@@ -77,7 +99,6 @@ headers = {
     "Content-Type": "application/json",
 }
 
-# Get repo public key for secret encryption
 pub_key_url = f"https://api.github.com/repos/{owner}/{repo}/actions/secrets/public-key"
 req = Request(pub_key_url, headers=headers)
 try:
@@ -90,17 +111,13 @@ except urllib.error.HTTPError as e:
 key_id    = pub_key_data['key_id']
 pub_key_b = pub_key_data['key']
 
-# Encrypt using PyNaCl (libsodium) if available, otherwise fallback instruction
 try:
     from nacl import encoding, public as nacl_public
 
     def encrypt_secret(public_key_b64: str, secret: str) -> str:
         pk = nacl_public.PublicKey(public_key_b64.encode(), encoding.Base64Encoder)
         box = nacl_public.SealedBox(pk)
-        enc = box.encrypt(secret.encode())
-        return base64.b64encode(enc).decode()
-
-    keys = {$(for k in "${!KEYS[@]}"; do echo "    \"$k\": \"${KEYS[$k]}\","; done)}
+        return base64.b64encode(box.encrypt(secret.encode())).decode()
 
     for secret_name, secret_value in keys.items():
         enc_val = encrypt_secret(pub_key_b, secret_value)
@@ -115,11 +132,10 @@ try:
 
 except ImportError:
     print("\n  PyNaCl not installed. Install with: pip3 install PyNaCl")
-    print("  Then re-run this script.")
-    print("\n  OR add secrets manually at:")
-    print(f"  https://github.com/{owner}/{repo}/settings/secrets/actions")
-    print("\n  Keys to add:")
-    keys = {$(for k in "${!KEYS[@]}"; do echo "    \"$k\": \"${KEYS[$k][:4]}...\","; done)}
+    print("  Then re-run this script.\n")
+    print("  OR add secrets manually at:")
+    print(f"  https://github.com/{owner}/{repo}/settings/secrets/actions\n")
+    print("  Keys to add:")
     for k in keys:
         print(f"    {k}")
 PYEOF

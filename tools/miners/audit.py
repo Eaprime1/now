@@ -61,7 +61,19 @@ def audit_file(path: Path) -> dict:
         return {'path': path, 'error': str(e)}
 
     links = extract_links(text)
-    broken_links = [l for l in links if not l.startswith('http') and not (REPO / l).exists()]
+    broken_links = []
+    for link in links:
+        # skip external, pure anchors, and mailto
+        if link.startswith(('http', '#', 'mailto:')):
+            continue
+        # strip fragment, then skip if nothing left
+        link_path = link.split('#')[0]
+        if not link_path:
+            continue
+        # resolve relative to the source file's directory
+        resolved = (path.parent / link_path).resolve()
+        if not resolved.exists():
+            broken_links.append(link)
 
     return {
         'path':         path,

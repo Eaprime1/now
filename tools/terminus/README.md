@@ -1,7 +1,7 @@
 # terminus tools
 
 The serial layer interface for the `now` terminus.
-Works in any terminal. No dependencies beyond Python stdlib + requests.
+Works in any terminal. No dependencies beyond Python stdlib (3.9+).
 
 This is the BBS home screen — the foundation of the interface stack.
 

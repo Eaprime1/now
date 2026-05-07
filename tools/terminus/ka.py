@@ -175,7 +175,7 @@ def print_summary(results: list, verbose=False):
     print()
     print(c(BOLD, '  Routing Recommendations'))
     print(c(DIM, '  ' + '─' * 50))
-    for label, color, desc in THRESHOLDS:
+    for _, label, color, desc in THRESHOLDS:
         matching = [r for r in results if r['state'] == label]
         if matching:
             print(f"  {c(color, label.ljust(10))} {desc}")
@@ -188,12 +188,14 @@ def print_summary(results: list, verbose=False):
 # ── entry ─────────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
+    import json as _json
     parser = argparse.ArgumentParser(description='Ka Level Analyzer — now terminus')
     parser.add_argument('--verbose', '-v', action='store_true', help='Show component breakdown per doc')
     parser.add_argument('--hidden', action='store_true', help='Include hidden (.claude etc) docs')
     parser.add_argument('--threshold', '-t', type=float, default=0,
                         help='Only show docs with Ka >= this value')
     parser.add_argument('--file', '-f', help='Analyze a single specific file')
+    parser.add_argument('--json', metavar='PATH', help='Save results as JSON (no terminal output)')
     args = parser.parse_args()
 
     if args.file:
@@ -216,4 +218,16 @@ if __name__ == '__main__':
         if args.threshold:
             results = [r for r in results if r['ka'] >= args.threshold]
         results.sort(key=lambda x: x['ka'], reverse=True)
-        print_summary(results, verbose=args.verbose)
+
+        if args.json:
+            payload = [
+                {'path': str(r['path'].relative_to(REPO)), 'ka': r['ka'],
+                 'state': r['state'],
+                 'components': {k: {'score': v[0], 'note': v[1]}
+                                for k, v in r['components'].items()}}
+                for r in results
+            ]
+            Path(args.json).write_text(_json.dumps(payload, indent=2))
+            print(c(GREEN, f"  ✓ Ka JSON saved: {args.json}"))
+        else:
+            print_summary(results, verbose=args.verbose)

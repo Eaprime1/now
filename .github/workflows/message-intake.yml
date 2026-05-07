@@ -15,10 +15,18 @@ on:
 
 jobs:
   process-intake:
+    # Security: only run for trusted repo members, not external issue openers.
+    # Maintainer applies the 'intake' label manually for external issues.
     if: |
-      contains(github.event.issue.labels.*.name, 'intake') ||
-      contains(github.event.issue.body, '[INTAKE]') ||
-      startsWith(github.event.issue.title, 'MSG:')
+      (
+        contains(github.event.issue.labels.*.name, 'intake') ||
+        contains(github.event.issue.body, '[INTAKE]') ||
+        startsWith(github.event.issue.title, 'MSG:')
+      ) && (
+        github.event.issue.author_association == 'OWNER' ||
+        github.event.issue.author_association == 'MEMBER' ||
+        github.event.issue.author_association == 'COLLABORATOR'
+      )
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -125,8 +133,11 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const improved = decodeURIComponent(`${{ steps.gemini.outputs.GEMINI_OUTPUT }}`.replace(/%0A/g,'\n').replace(/%0D/g,'\r').replace(/%25/g,'%'));
-            const topics   = decodeURIComponent(`${{ steps.gemini.outputs.KEY_TOPICS }}`.replace(/%0A/g,'\n').replace(/%0D/g,'\r').replace(/%25/g,'%'));
+            // Reverse the %0A/%0D/%25 escaping used for GITHUB_OUTPUT — no decodeURIComponent
+            // (which would throw on any literal % not forming a valid URI escape sequence)
+            const unescape = s => s.replace(/%0A/g,'\n').replace(/%0D/g,'\r').replace(/%25/g,'%');
+            const improved = unescape(`${{ steps.gemini.outputs.GEMINI_OUTPUT }}`);
+            const topics   = unescape(`${{ steps.gemini.outputs.KEY_TOPICS }}`);
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,

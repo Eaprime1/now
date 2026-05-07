@@ -1,15 +1,14 @@
 name: Terminus Miners
 
-# Runs on push to main — mines lexemes, runs content audit,
-# posts Ka + word stat summary as a commit comment.
+# Runs on push to main — mines lexemes, runs content audit, Ka analysis.
 # Results committed to .miners/ for history tracking.
+# Bot guard prevents the commit from re-triggering this workflow.
 
 on:
   push:
     branches: [main]
     paths:
       - '**/*.md'
-      - '**/*.txt'
       - '**/*.py'
       - '**/*.sh'
   workflow_dispatch:
@@ -21,6 +20,8 @@ on:
 
 jobs:
   mine:
+    # Skip runs triggered by the bot's own commits to prevent loop
+    if: github.actor != 'terminus-miners[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -47,8 +48,7 @@ jobs:
       - name: Run Ka analyzer
         run: |
           python3 tools/terminus/ka.py \
-            --json .miners/ka_$(date -u +%Y%m%d).json 2>/dev/null || \
-          python3 tools/terminus/ka.py > .miners/ka_$(date -u +%Y%m%d).txt 2>&1 || true
+            --json .miners/ka_$(date -u +%Y%m%d).json
 
       - name: Generate summary
         id: summary
@@ -61,7 +61,6 @@ jobs:
           today = date.today().strftime('%Y%m%d')
           out = []
 
-          # lexeme summary
           lpath = Path(f'.miners/lexeme_{today}.json')
           if lpath.exists():
               d = json.loads(lpath.read_text())
@@ -70,7 +69,6 @@ jobs:
               total = sum(d.get('top_100', {}).values())
               out.append(f"**Lexeme Mine:** {d['file_count']} files · {total:,} top-word occurrences · top: {top_str}")
 
-          # audit summary
           apath = Path(f'.miners/audit_{today}.json')
           if apath.exists():
               d = json.loads(apath.read_text())
@@ -89,9 +87,7 @@ jobs:
         run: |
           git config user.name  "terminus-miners[bot]"
           git config user.email "miners@now"
-          # gitignore the large snapshot dirs to keep repo lean
-          echo ".miners/snapshots_*/" >> .gitignore
-          git add .miners/ .gitignore 2>/dev/null || true
+          git add .miners/ 2>/dev/null || true
           git diff --cached --quiet || \
             git commit -m "mine: lexeme + audit $(date -u +%Y-%m-%d) ~witnessed~"
           git push || true

@@ -49,7 +49,7 @@ sudo ./clean.sh --dry-run --all
 |------|--------|------|
 | User app cache (`~/.cache`) | `rm -rf ~/.cache/*` | Apps may be slower until cache rebuilds |
 | Crash reports (`/var/crash`) | `rm /var/crash/*` | Lose crash diagnostics |
-| Old temp files | `find /tmp -atime +7 -delete` | None for files unused 7+ days |
+| Old temp files | `find /tmp -mtime +7 -delete` | None for files unmodified 7+ days |
 | Unused locales | `localepurge` | Locale data for other languages removed |
 
 ## Config

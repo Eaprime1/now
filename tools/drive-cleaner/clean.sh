@@ -17,6 +17,12 @@ RUN_ALL=false
 # ── load config overrides ─────────────────────────────────────────────────────
 [[ -f "$CONFIG_FILE" ]] && source "$CONFIG_FILE"
 
+# ── resolve the real user's home when running under sudo ──────────────────────
+# sudo typically sets HOME=/root; we want the invoking user's home instead.
+REAL_USER="${SUDO_USER:-${USER:-$(id -un)}}"
+REAL_HOME=$(getent passwd "$REAL_USER" 2>/dev/null | cut -d: -f6)
+REAL_HOME="${REAL_HOME:-$HOME}"
+
 # ── colours ───────────────────────────────────────────────────────────────────
 RED='\033[0;31m'; YELLOW='\033[1;33m'; GREEN='\033[0;32m'
 CYAN='\033[0;36m'; BOLD='\033[1m'; RESET='\033[0m'
@@ -111,8 +117,8 @@ report_mode() {
     df -h --output=source,fstype,size,used,avail,pcent,target \
         | grep -v tmpfs | grep -v udev
 
-    echo -e "\n${BOLD}Top 15 space consumers under /:${RESET}"
-    du -axh / 2>/dev/null \
+    echo -e "\n${BOLD}Top 15 space consumers (known large dirs, depth 3):${RESET}"
+    du -ah --max-depth=3 /var /home /usr /opt /snap 2>/dev/null \
         | sort -rh \
         | head -15
 
@@ -137,8 +143,15 @@ report_mode() {
     echo -e "\n${BOLD}Crash reports (/var/crash):${RESET}"
     ls -lh /var/crash/ 2>/dev/null || echo "  empty or missing"
 
-    echo -e "\n${BOLD}User cache dir (~/.cache):${RESET}"
-    du -sh ~/.cache 2>/dev/null || echo "  n/a"
+    echo -e "\n${BOLD}User cache dir (${REAL_HOME}/.cache):${RESET}"
+    du -sh "${REAL_HOME}/.cache" 2>/dev/null || echo "  n/a"
+
+    if [[ ${#EXTRA_REPORT_DIRS[@]} -gt 0 ]]; then
+        echo -e "\n${BOLD}Extra directories:${RESET}"
+        for dir in "${EXTRA_REPORT_DIRS[@]}"; do
+            [[ -d "$dir" ]] && du -sh "$dir" 2>/dev/null || echo "  $dir: not found"
+        done
+    fi
 
     sep
     echo -e "${GREEN}Report complete — no changes made.${RESET}\n"
@@ -219,7 +232,7 @@ clean_journals() {
 
 clean_thumbnails() {
     sep; log "Thumbnail cache"
-    local thumb_dir="${HOME}/.cache/thumbnails"
+    local thumb_dir="${REAL_HOME}/.cache/thumbnails"
     if [[ -d "$thumb_dir" ]]; then
         local size; size=$(du -sh "$thumb_dir" 2>/dev/null | cut -f1)
         log "Thumbnail cache size: $size"
@@ -236,12 +249,13 @@ clean_thumbnails() {
 # ══════════════════════════════════════════════════════════════════════════════
 
 clean_user_cache() {
-    sep; log "User application cache (~/.cache)"
-    local size; size=$(du -sh ~/.cache 2>/dev/null | cut -f1)
-    warn "~/.cache is $size — this clears ALL cached app data"
-    if confirm "Clear ~/.cache (keeps thumbnails dir itself)?"; then
+    sep; log "User application cache (~/.cache) for ${REAL_USER}"
+    local cache_dir="${REAL_HOME}/.cache"
+    local size; size=$(du -sh "$cache_dir" 2>/dev/null | cut -f1)
+    warn "${cache_dir} is $size — this clears ALL cached app data"
+    if confirm "Clear ${cache_dir} (keeps thumbnails dir itself)?"; then
         # exclude thumbnails dir itself since we handle it above
-        find ~/.cache -mindepth 1 -maxdepth 1 \
+        find "$cache_dir" -mindepth 1 -maxdepth 1 \
             ! -name 'thumbnails' \
             -exec rm -rf {} + 2>/dev/null || true
         ok "User cache cleared (thumbnails folder preserved)"
@@ -264,8 +278,8 @@ clean_crash_reports() {
 
 clean_temp_files() {
     sep; log "Old temp files (/tmp, /var/tmp)"
-    local tmp_size; tmp_size=$(du -sh /tmp /var/tmp 2>/dev/null | awk '{sum+=$1} END{print sum}')
-    log "/tmp + /var/tmp: ${tmp_size}K"
+    local tmp_bytes; tmp_bytes=$(du -sb /tmp /var/tmp 2>/dev/null | awk '{sum+=$1} END{print sum+0}')
+    log "/tmp + /var/tmp: $(numfmt --to=iec "$tmp_bytes" 2>/dev/null || echo "${tmp_bytes} bytes")"
     if confirm "Remove temp files older than 7 days?"; then
         run_cmd "Cleaning /tmp"     find /tmp     -type f -mtime +7 -delete 2>/dev/null || true
         run_cmd "Cleaning /var/tmp" find /var/tmp -type f -mtime +7 -delete 2>/dev/null || true

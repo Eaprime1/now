@@ -23,3 +23,8 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Miner snapshots (large, regeneratable)
+.miners/snapshots_*/
+# Log files
+tools/drive-cleaner/clean.log
