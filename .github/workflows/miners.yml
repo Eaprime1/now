@@ -1,0 +1,97 @@
+name: Terminus Miners
+
+# Runs on push to main — mines lexemes, runs content audit,
+# posts Ka + word stat summary as a commit comment.
+# Results committed to .miners/ for history tracking.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.md'
+      - '**/*.txt'
+      - '**/*.py'
+      - '**/*.sh'
+  workflow_dispatch:
+    inputs:
+      full_report:
+        description: 'Run full verbose audit'
+        type: boolean
+        default: false
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run lexeme miner
+        run: |
+          mkdir -p .miners
+          python3 tools/miners/lexeme.py \
+            --json .miners/lexeme_$(date -u +%Y%m%d).json \
+            --csv  .miners/lexeme_$(date -u +%Y%m%d).csv \
+            --snapshots .miners/snapshots_$(date -u +%Y%m%d)
+
+      - name: Run content audit
+        run: |
+          python3 tools/miners/audit.py \
+            --json .miners/audit_$(date -u +%Y%m%d).json
+
+      - name: Run Ka analyzer
+        run: |
+          python3 tools/terminus/ka.py \
+            --json .miners/ka_$(date -u +%Y%m%d).json 2>/dev/null || \
+          python3 tools/terminus/ka.py > .miners/ka_$(date -u +%Y%m%d).txt 2>&1 || true
+
+      - name: Generate summary
+        id: summary
+        run: |
+          python3 - <<'PYEOF'
+          import json, os
+          from pathlib import Path
+          from datetime import date
+
+          today = date.today().strftime('%Y%m%d')
+          out = []
+
+          # lexeme summary
+          lpath = Path(f'.miners/lexeme_{today}.json')
+          if lpath.exists():
+              d = json.loads(lpath.read_text())
+              top10 = list(d.get('top_100', {}).items())[:10]
+              top_str = ', '.join(f"{w}({n})" for w,n in top10)
+              total = sum(d.get('top_100', {}).values())
+              out.append(f"**Lexeme Mine:** {d['file_count']} files · {total:,} top-word occurrences · top: {top_str}")
+
+          # audit summary
+          apath = Path(f'.miners/audit_{today}.json')
+          if apath.exists():
+              d = json.loads(apath.read_text())
+              by_state = d.get('by_state', {})
+              state_str = ' · '.join(f"{s}:{len(items)}" for s,items in sorted(by_state.items()))
+              dups = len(d.get('duplicates', {}))
+              out.append(f"**Content Audit:** {d['total_files']} files · {state_str} · {dups} duplicate groups")
+
+          summary = '\n'.join(out) if out else 'No summary data'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              escaped = summary.replace('%','%25').replace('\n','%0A')
+              f.write(f"SUMMARY={escaped}\n")
+          PYEOF
+
+      - name: Commit miner output
+        run: |
+          git config user.name  "terminus-miners[bot]"
+          git config user.email "miners@now"
+          # gitignore the large snapshot dirs to keep repo lean
+          echo ".miners/snapshots_*/" >> .gitignore
+          git add .miners/ .gitignore 2>/dev/null || true
+          git diff --cached --quiet || \
+            git commit -m "mine: lexeme + audit $(date -u +%Y-%m-%d) ~witnessed~"
+          git push || true
