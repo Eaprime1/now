@@ -3,7 +3,7 @@
 # ECC Tools generated Codex baseline
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-web_search = "live"
+web_search = "off"
 
 [mcp_servers.github]
 command = "npx"
