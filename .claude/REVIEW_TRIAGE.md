@@ -49,7 +49,7 @@ These matter - address immediately:
 | Wrong structure | Docs describe paths that don't exist | Misleads AI/human sessions |
 | Import errors | `import module_that_doesnt_exist` | Script fails |
 
-**~!Claude already caught one of these~!** - PR #9 fixed hardcoded paths
+**~!Example~!** - Fixed hardcoded paths in scripts
 
 ---
 
