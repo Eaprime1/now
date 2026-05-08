@@ -134,7 +134,7 @@ Target branch: main
 
 Enable:
 ✅ Require pull request
-   - Required approvals: 0  (you're solo + AI)
+   - Required approvals: 1  (keeps main review-protected)
    - Dismiss stale reviews: YES
 
 ✅ Block force pushes
