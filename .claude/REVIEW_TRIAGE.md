@@ -97,7 +97,7 @@ Do you want me to write a relevant one for this project?
 
 ---
 
-## For Auto-Reviews (Claude/Gemini)
+## For Auto-Reviews (Claude)
 
 **Claude Code Review** (`.github/workflows/`) runs on every PR.
 **Pattern to use:**
