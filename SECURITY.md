@@ -19,7 +19,7 @@ If you find:
 - Personal data that shouldn't be public
 - API keys or tokens accidentally committed
 
-Please open an issue.
+Please report vulnerabilities privately via GitHub's Private Vulnerability Reporting.
 
 ---
 
