@@ -33,6 +33,6 @@ Python scripts in `gravity_core/scripts/` use environment variables for paths:
 
 ## Sensitive Content
 
-`.gitignore` excludes `}percolate{` content (private workspace) and local env files.
+This repository may contain references to private workspace content and local environment configuration. Do not assume `.gitignore` excludes all such files; verify repository ignore rules before committing sensitive material.
 
 ~∰◊€π¿🌌∞~
