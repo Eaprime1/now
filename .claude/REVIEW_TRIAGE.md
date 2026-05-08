@@ -139,7 +139,7 @@ Enable:
 
 ✅ Block force pushes
 
-✅ Require deployments to succeed (skip for now)
+❌ Require deployments to succeed (add later)
 
 Leave OFF for now:
 ❌ Required status checks (add later when CI stable)
