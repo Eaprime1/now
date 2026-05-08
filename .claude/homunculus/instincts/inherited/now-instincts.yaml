@@ -62,7 +62,7 @@ Use relative imports for project files
 ## Evidence
 
 - Import analysis shows relative import pattern
-- Example: import { x } from '../lib/x'
+- Example: from ..lib.x import x
 
 ---
 id: now-export-style
