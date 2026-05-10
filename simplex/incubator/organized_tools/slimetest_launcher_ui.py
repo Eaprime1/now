@@ -143,7 +143,10 @@ class SlimetestLauncher:
         
         # Run server (blocking)
         try:
-            subprocess.run(command, shell=True)
+            subprocess.run(
+                [sys.executable, "-m", "http.server", str(port)],
+                cwd=str(self.github_path)
+            )
         except KeyboardInterrupt:
             print("\n\n🛑 Server stopped by user")
             return True
