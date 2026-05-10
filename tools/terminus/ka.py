@@ -58,7 +58,8 @@ def score_connections(path: Path) -> tuple[float, str]:
     # how many other .md files link to this one
     stem = path.stem
     name = path.name
-    inbound_raw = sh(f"grep -r '{name}\\|{stem}' --include='*.md' -l .")
+    inbound_raw = sh(['grep', '-rE', f'{name}|{stem}', '--include=*.md', '-l', '.'])
+    inbound = len([l for l in inbound_raw.splitlines() if l.strip()])
     inbound = len([l for l in inbound_raw.splitlines() if l.strip()])
 
     total = outbound + inbound
