@@ -1,0 +1,170 @@
+name: Message Intake Processor
+
+# Triggered when an issue is opened with label 'intake'
+# OR when the issue body contains the marker [INTAKE]
+# Workflow:
+#   1. Archives the exact message (conservation bias)
+#   2. Gemini improves/structures it
+#   3. Gemini extracts key topics
+#   4. Posts both (original preserved + improved) as comments
+#   5. Adds state:building label
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  process-intake:
+    # Security: only run for trusted repo members, not external issue openers.
+    # Maintainer applies the 'intake' label manually for external issues.
+    if: |
+      (
+        contains(github.event.issue.labels.*.name, 'intake') ||
+        contains(github.event.issue.body, '[INTAKE]') ||
+        startsWith(github.event.issue.title, 'MSG:')
+      ) && (
+        github.event.issue.author_association == 'OWNER' ||
+        github.event.issue.author_association == 'MEMBER' ||
+        github.event.issue.author_association == 'COLLABORATOR'
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Archive original message
+        id: archive
+        run: |
+          mkdir -p .intake
+          SAFE_TITLE=$(echo "${{ github.event.issue.title }}" | tr ' /\\:*?"<>|' '_' | cut -c1-60)
+          FILENAME=".intake/$(date -u +%Y%m%d_%H%M%S)_issue${{ github.event.issue.number }}_${SAFE_TITLE}.md"
+          cat > "$FILENAME" <<'MSGEOF'
+          # Archived Message — Issue #${{ github.event.issue.number }}
+
+          **Title:** ${{ github.event.issue.title }}
+          **Author:** ${{ github.event.issue.user.login }}
+          **Created:** ${{ github.event.issue.created_at }}
+          **URL:** ${{ github.event.issue.html_url }}
+
+          ## Exact Original
+
+          ${{ github.event.issue.body }}
+          MSGEOF
+          echo "ARCHIVE_PATH=$FILENAME" >> $GITHUB_OUTPUT
+
+      - name: Process with Gemini
+        id: gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, json, urllib.request, urllib.error
+
+          api_key = os.environ.get('GEMINI_API_KEY', '')
+          if not api_key:
+              print("GEMINI_OUTPUT=No Gemini key configured (add GEMINI_API_KEY secret)")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                  f.write("GEMINI_OUTPUT=No Gemini key configured\n")
+                  f.write("KEY_TOPICS=No key topics extracted\n")
+              exit(0)
+
+          body  = os.environ.get('ISSUE_BODY', '')
+          title = os.environ.get('ISSUE_TITLE', '')
+
+          url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+          headers = {"Content-Type": "application/json"}
+
+          # ── improve + structure ─────────────────────────────────────────────
+          prompt_improve = f"""You are helping organize ideas for a creative/technical project called 'now' — a multi-agent terminus system.
+
+          The author (Eric) has ADHD and writes in fast, stream-of-consciousness style. Your job:
+          1. Preserve ALL ideas — nothing is discarded
+          2. Organize the ideas into clear sections
+          3. Identify what is: a question, a request, a concept, an observation
+          4. Keep Eric's voice and intention intact
+          5. Add a "Next Steps" section with 3-5 concrete next actions
+
+          Original title: {title}
+
+          Original message:
+          {body}
+
+          Respond with a well-structured markdown document."""
+
+          payload = {"contents": [{"parts": [{"text": prompt_improve}]}]}
+          try:
+              req = urllib.request.Request(url, json.dumps(payload).encode(), headers)
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  data = json.loads(resp.read())
+              improved = data['candidates'][0]['content']['parts'][0]['text']
+          except Exception as e:
+              improved = f"Gemini processing error: {e}"
+
+          # ── extract key topics ──────────────────────────────────────────────
+          prompt_topics = f"""Extract the 5-8 most important concepts, terms, or topics from this message.
+          Format as a simple bulleted list. Each item: the term + one sentence definition in context.
+
+          Message: {body}"""
+
+          payload2 = {"contents": [{"parts": [{"text": prompt_topics}]}]}
+          try:
+              req2 = urllib.request.Request(url, json.dumps(payload2).encode(), headers)
+              with urllib.request.urlopen(req2, timeout=30) as resp2:
+                  data2 = json.loads(resp2.read())
+              topics = data2['candidates'][0]['content']['parts'][0]['text']
+          except Exception as e:
+              topics = f"Topic extraction error: {e}"
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              # escape multiline for github output
+              improved_escaped = improved.replace('%', '%25').replace('\n', '%0A').replace('\r', '%0D')
+              topics_escaped   = topics.replace('%', '%25').replace('\n', '%0A').replace('\r', '%0D')
+              f.write(f"GEMINI_OUTPUT={improved_escaped}\n")
+              f.write(f"KEY_TOPICS={topics_escaped}\n")
+          PYEOF
+
+      - name: Post structured version as comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Reverse the %0A/%0D/%25 escaping used for GITHUB_OUTPUT — no decodeURIComponent
+            // (which would throw on any literal % not forming a valid URI escape sequence)
+            const unescape = s => s.replace(/%0A/g,'\n').replace(/%0D/g,'\r').replace(/%25/g,'%');
+            const improved = unescape(`${{ steps.gemini.outputs.GEMINI_OUTPUT }}`);
+            const topics   = unescape(`${{ steps.gemini.outputs.KEY_TOPICS }}`);
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## Structured by Gemini\n\n${improved}\n\n---\n\n## Key Topics\n\n${topics}\n\n---\n*Original message preserved in \`.intake/\` — conservation bias.*`
+            });
+
+      - name: Commit archived message
+        run: |
+          git config user.name  "terminus-intake[bot]"
+          git config user.email "terminus@now"
+          git add .intake/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "archive: intake #${{ github.event.issue.number }} ~witnessed $(date -u +%Y-%m-%d)~"
+          git push || true
+
+      - name: Add state label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo:  context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['state:building']
+              });
+            } catch(e) {
+              console.log('Label add failed (may not exist yet):', e.message);
+            }
