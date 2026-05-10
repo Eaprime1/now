@@ -131,7 +131,7 @@ class SlimetestLauncher:
         print(f"📁 Path: {self.github_path}")
         
         # Python simple HTTP server
-        command = f"cd {self.github_path} && python3 -m http.server {port}"
+        command = f"{sys.executable} -m http.server {port}"
         
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
