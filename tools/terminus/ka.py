@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Ka Level Analyzer — now terminus
+Ka Level Analyzer — now terminus ♓
 Ka = accumulated energy/gravity of a concept or document.
 Not time-based — weight-based: iterations, connections, attention, feedback.
 When Ka reaches threshold → concept routes to next stage automatically.

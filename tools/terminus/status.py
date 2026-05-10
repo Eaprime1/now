@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-now terminus — status dashboard
+now terminus — status dashboard ♓
 The serial layer. Works in any terminal, no dependencies beyond stdlib.
 Serial → parallel → GUI upgrade path: this is the serial foundation.
 """

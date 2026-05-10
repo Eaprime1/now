@@ -1,4 +1,4 @@
-# This script merges two or more python files into one
+# This script merges two or more python files into one ♓
 # It assumes that the files are in the same directory and that there are no circular imports
 # It also assumes that the functions have unique names within each file, but they may have duplicates across files
 # It uses a prefix for the functions based on the file name
