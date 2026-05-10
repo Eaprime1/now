@@ -79,6 +79,12 @@ class SlimetestLauncher:
     
     def execute_command(self, command):
         """Execute a command and return result"""
+        _shell_ops = ('|', '&&', '||', ';', '>', '>>', '<', '$(', '`')
+        if any(op in command for op in _shell_ops):
+            print("⚠️  Shell operators (|, &&, ;, redirects) are not supported.")
+            print("    Split compound commands and run each part separately.")
+            self.add_to_history(command, "rejected: shell operators not supported")
+            return False
         try:
             print(f"\n🚀 Executing: {command}")
             result = subprocess.run(  # nosec B603
@@ -129,8 +135,8 @@ class SlimetestLauncher:
         print(f"\n🌟 Launching Slimetest Essence Engine on port {port}...")
         print(f"📁 Path: {self.github_path}")
         
-        # Python simple HTTP server
-        command = f"cd {self.github_path} && python3 -m http.server {port}"
+        # Shell-equivalent history entry using the actual interpreter path
+        command = f"cd {self.github_path} && {sys.executable} -m http.server {port}"
 
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
@@ -212,6 +218,7 @@ class SlimetestLauncher:
                 print("\n💬 CUSTOM COMMAND EXECUTION")
                 print("=" * 60)
                 print("Paste or type your command below:")
+                print("Note: shell operators (|, &&, ;, redirects) are not supported.")
                 print("(Press Enter with empty line to cancel)")
                 command = input("\n👉 Command: ").strip()
                 
