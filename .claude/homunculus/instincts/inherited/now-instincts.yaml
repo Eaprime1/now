@@ -1,0 +1,261 @@
+# Instincts generated from https://github.com/Eaprime1/now
+# Generated: 2026-05-06T21:35:30.622Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: now-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/now
+---
+
+# Now Commit Length
+
+## Action
+
+Keep commit messages concise (~29 characters)
+
+## Evidence
+
+- Average commit message length: 29 chars
+- Based on 1 commits
+
+---
+id: now-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/now
+---
+
+# Now Naming Files
+
+## Action
+
+Use snake_case naming convention for Python modules/scripts, and follow existing repository conventions for other file types
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern for Python modules/scripts: snake_case
+
+---
+id: now-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/now
+---
+
+# Now Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: from ..lib.x import x
+
+---
+id: now-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/now
+---
+
+# Now Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: now-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/now
+---
+
+# Now Test Separate
+
+## Action
+
+Keep tests separate from implementation files and follow the repository's existing test layout
+
+## Evidence
+
+- Testing files should not be assumed to live under tests/ or __tests__/ in this repository
+- Follow the current project structure when adding or updating tests
+
+---
+id: now-instinct-function-naming-camelcase
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Function Naming Camelcase
+
+## Action
+
+118:## Action
+119:
+120:Name the function using camelCase (for TypeScript/JavaScript)
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: now-instinct-class-naming-pascalcase
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Class Naming Pascalcase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: now-instinct-constant-naming-screaming-snake-case
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Constant Naming Screaming Snake Case
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: now-instinct-import-style-relative
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Import Style Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: now-instinct-export-style-named
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Export Style Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: now-instinct-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Commit Format Freeform
+
+## Action
+
+Use a freeform commit message without a prefix
+
+## Evidence
+
+- Pattern in commits.type
+- Example: 'add ubuntu drive cleaner tool'
+
+---
+id: now-instinct-commit-length-short
+trigger: "When writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Commit Length Short
+
+## Action
+
+Keep the commit message concise, around 29 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: now-instinct-tests-in-separate-folder
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Eaprime1/now
+---
+
+# Now Instinct Tests In Separate Folder
+
+## Action
+
+Place test files in a separate folder from source code
+
+## Evidence
+
+- Pattern in architecture.testLocation
+
