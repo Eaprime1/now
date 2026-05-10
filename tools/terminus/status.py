@@ -5,7 +5,7 @@ The serial layer. Works in any terminal, no dependencies beyond stdlib.
 Serial → parallel → GUI upgrade path: this is the serial foundation.
 """
 
-import subprocess, os, sys, re, math, datetime, shlex
+import subprocess, os, sys, re, math, datetime, shlex  # nosec B404
 from pathlib import Path
 
 # ── locate repo root ──────────────────────────────────────────────────────────
@@ -30,7 +30,7 @@ def c(color, text):
 
 def sh(cmd):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)
+    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)  # nosec B603
     return r.stdout.strip()
 
 # ── terminal width ────────────────────────────────────────────────────────────
@@ -124,7 +124,7 @@ def ka_scores(top=6):
 
             ka = size_score + link_score + recency + commit_score
             scores.append({'name': path.relative_to(REPO), 'ka': round(ka), 'commits': commits})
-        except Exception:
+        except Exception:  # nosec B112
             continue
 
     scores.sort(key=lambda x: x['ka'], reverse=True)

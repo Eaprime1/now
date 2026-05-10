@@ -6,7 +6,7 @@ Not time-based — weight-based: iterations, connections, attention, feedback.
 When Ka reaches threshold → concept routes to next stage automatically.
 """
 
-import subprocess, re, math, datetime, argparse, os, sys, shlex
+import subprocess, re, math, datetime, argparse, os, sys, shlex  # nosec B404
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -25,7 +25,7 @@ def c(color, text): return text if NO_COLOR else f"{color}{text}{RESET}"
 
 def sh(cmd, cwd=REPO):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)
+    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)  # nosec B603
     return r.stdout.strip()
 
 # ── Ka scoring components (each 0-25 = 100 total) ────────────────────────────

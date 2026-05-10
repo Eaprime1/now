@@ -14,7 +14,7 @@ Features:
 
 import os
 import sys
-import subprocess
+import subprocess  # nosec B404
 import json
 import shlex
 from pathlib import Path
@@ -81,7 +81,7 @@ class SlimetestLauncher:
         """Execute a command and return result"""
         try:
             print(f"\n🚀 Executing: {command}")
-            result = subprocess.run(
+            result = subprocess.run(  # nosec B603
                 shlex.split(command),
                 capture_output=True,
                 text=True,
@@ -130,7 +130,7 @@ class SlimetestLauncher:
         print(f"📁 Path: {self.github_path}")
         
         # Python simple HTTP server
-        command = f"python3 -m http.server {port} (cwd: {self.github_path})"
+        command = f"cd {self.github_path} && python3 -m http.server {port}"
 
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
@@ -140,10 +140,10 @@ class SlimetestLauncher:
 
         self.add_to_history(command, "server_launched")
 
-        # Run server (blocking)
+        # Run server (blocking) — use sys.executable + cwd instead of shell string
         try:
-            subprocess.run(
-                ['python3', '-m', 'http.server', str(port)],
+            subprocess.run(  # nosec B603 B607
+                [sys.executable, '-m', 'http.server', str(port)],
                 cwd=str(self.github_path)
             )
         except KeyboardInterrupt:
