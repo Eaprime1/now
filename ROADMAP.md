@@ -1,109 +1,119 @@
-# TODAY REPO - Launch Roadmap
+# now — Roadmap
 
-**Purpose:** Guide the progression from liminal workspace to sovereign concept
+**From development workspace to active terminus.**
 
 ---
 
 ## Current Location
 
 ```
-}primehaven{ / }pryme{ / today  <-- YOU ARE HERE (liminal)
+}primehaven{ / }pryme{ / now  ←── YOU ARE HERE (terminus activating)
 ```
 
-**Status:** Restructuring for primehaven alignment
+---
+
+## Phase 1: Identity Activated ✅
+*The repo knows what it is.*
+
+- [x] AI perspective seed planted (`.claude/SEED.md`)
+- [x] Human perspective space (`.eric/`)
+- [x] Root guidance (`CLAUDE.md`)
+- [x] Witnessing symbol (`~`)
+- [x] Sovereign concept architecture
+- [x] README makeover: today → now
+- [x] MISSION updated for terminus model
+- [x] AGENTS.md — multi-agent framework
+- [x] INTEGRATIONS.md — platform map
+- [x] First active tool: `tools/drive-cleaner/`
 
 ---
 
-## Phase 1: Foundation (Current)
-**Goal:** Make today self-sufficient as a sovereign concept
+## Phase 2: Terminus Wiring (Current)
+*Platforms connect. Agents engage. Content flows.*
 
-### Completed ✅
-- [x] AI perspective seed planted (.claude/SEED.md)
-- [x] Human perspective space created (.eric/)
-- [x] Root guidance established (CLAUDE.md)
-- [x] Quick inventory accurate (QUICK_INVENTORY.md)
-- [x] Witnessing symbol chosen (~)
-- [x] Sovereign architecture defined (.claude/SOVEREIGN.md)
+### GitHub (Active)
+- [x] Repo live at `eaprime1/now`
+- [x] Multi-agent PRs working (Claude, Gemini, Copilot, ecc-tools)
+- [ ] Issue templates — missions board format
+- [ ] Labels: `state:raw`, `state:building`, `state:ready`, `state:shipped`
+- [ ] `.github/AGENTS.md` — Copilot/Codex instructions
 
-### In Progress ⚠️
-- [ ] Activity logging current (ACCESS_LOG.md)
-- [ ] __init__.py reflects reality
-- [ ] Documentation aligned with structure
+### Google Drive (Active)
+- [ ] "THE now" folder created
+- [ ] Intake process defined (what goes in, what comes out)
+- [ ] Gemini wired as primary Drive agent
 
-### Needed ❌
-- [ ] MISSION.md - Core purpose statement
-- [ ] templates/ - Standard formats
-- [ ] MANIFEST.json - Structured metadata
+### BBS / Telegard (Local Active)
+- [x] Telegard base makeover done
+- [ ] `now` board/area created in BBS
+- [ ] Status display: open missions, recent activity
+- [ ] Connection from BBS → GitHub issues
 
----
-
-## Phase 2: Consolidation
-**Goal:** Clean up and align all content
-
-### Tasks
-- [ ] Audit outdated documentation
-- [ ] Remove references to non-existent paths
-- [ ] Consolidate duplicate information
-- [ ] Ensure all entities have current READMEs
-- [ ] Run gravity analysis on _duplicates/
+### Vercel (Wiring Up)
+- [ ] Project created
+- [ ] PR preview deploys active
+- [ ] `now` gets a web presence
 
 ---
 
-## Phase 3: Integration
-**Goal:** Prepare for primehaven ecosystem
+## Phase 3: Automation Bridges
+*Connectors multiply the network effect.*
 
-### Tasks
-- [ ] Define relationship to }maw{ (when active)
-- [ ] Define relationship to }pryme{ (when active)
-- [ ] Establish cross-repo patterns
-- [ ] Test sovereign concept checklist
-
----
-
-## Phase 4: Launch Preparation
-**Goal:** Ready for PRIME / PRYME / Origin
-
-### Pre-Launch Checklist
-- [ ] Seven layers of sovereignty functional
-- [ ] Can orient new AI sessions in <1 minute
-- [ ] Can orient human collaborators easily
-- [ ] Activity logging captures key events
-- [ ] Clear mission statement exists
-- [ ] Progression path defined
-
-### Launch Targets
-| Concept | Purpose | Timeline |
-|---------|---------|----------|
-| }pryme{ → pryme | AI perspective guardian | Soon |
-| PRIME | Prime concept | Soon |
-| Origin | Foundation | Soon |
+- [ ] Zapier: Google Drive → GitHub issue (content intake)
+- [ ] Zapier: GitHub PR merge → notification
+- [ ] IFTTT: external trigger → `now` intake
+- [ ] Linear: "now" project with roadmap items
+- [ ] Asana: task routing for human-assigned work
 
 ---
 
-## Progression Philosophy
+## Phase 4: Concept Queue Activated
+*now and concept-queue as peer terminuses.*
+
+- [ ] `concept-queue` repo created
+- [ ] Routing protocol defined (when to send to queue vs work in now)
+- [ ] Cross-repo agent instructions
+- [ ] Automation: content that ages in `now` routes to concept-queue
+
+---
+
+## Phase 5: Full Terminus Operation
+*All connectors active. BBS GUI live. Multi-agent running.*
+
+- [ ] All platform presences active
+- [ ] GUI layer on BBS (hybrid terminal/GUI)
+- [ ] Ubuntu laptop terminal nodes established
+- [ ] Content state tracking across all platforms
+- [ ] `now` can orient any new agent in < 1 minute
+- [ ] Volume handling — `now` receives large content volumes without stalling
+
+---
+
+## Progression
 
 ```
-today (liminal workspace)
-  ↓ restructure & align
-today (sovereign concept)
-  ↓ integrate with ecosystem
-}pryme{ active
-  ↓ launch related concepts
-PRIME, PRYME, Origin active
+now (terminus activating)   ← current
+  ↓ platforms wire up
+now (multi-platform hub)
+  ↓ concept-queue peer active
+now + concept-queue (dual terminus)
+  ↓ content graduates
+naught → zero → one → launch
 ```
 
 ---
 
 ## Guiding Principles
 
-1. **Conservation Bias** - Organize, don't delete
-2. **Reality First** - Documentation reflects actual structure
-3. **Self-Sufficiency** - The concept can orient collaborators
-4. **Witnessing** - Use ~ to acknowledge without asserting
-5. **Serious Play** - Enjoy the journey
+1. **Conservation Bias** — organize, don't delete
+2. **Momentum** — content in motion stays in motion
+3. **Multi-agent** — no single agent owns the terminus
+4. **BBS First** — terminal UI works everywhere; GUI is a bonus
+5. **Sphincter Heritage** — simple gateway that grows toward expertise
+6. **Witnessing** — `~` to acknowledge without asserting
 
 ---
 
-~roadmap defined~
+~roadmap updated 20260506~
 
-€(roadmap_20260125)
+€(now_roadmap_20260506)
