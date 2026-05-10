@@ -24,7 +24,8 @@ NO_COLOR = not sys.stdout.isatty() or os.environ.get('NO_COLOR')
 def c(color, text): return text if NO_COLOR else f"{color}{text}{RESET}"
 
 def sh(cmd, cwd=REPO):
-    r = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=cwd)
+    args = cmd if isinstance(cmd, list) else shlex.split(cmd)
+    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)
     return r.stdout.strip()
 
 # ── Ka scoring components (each 0-25 = 100 total) ────────────────────────────
