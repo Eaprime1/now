@@ -6,7 +6,7 @@ Not time-based — weight-based: iterations, connections, attention, feedback.
 When Ka reaches threshold → concept routes to next stage automatically.
 """
 
-import subprocess, re, math, datetime, argparse, os, sys
+import subprocess, re, math, datetime, argparse, os, sys, shlex
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
