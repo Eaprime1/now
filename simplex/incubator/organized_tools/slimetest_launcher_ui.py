@@ -79,12 +79,17 @@ class SlimetestLauncher:
     
     def execute_command(self, command):
         """Execute a command and return result"""
+        _shell_ops = ('|', '&&', '||', ';', '>', '>>', '<', '$(', '`')
+        if any(op in command for op in _shell_ops):
+            print("⚠️  Shell operators (|, &&, ;, redirects) are not supported.")
+            print("    Split compound commands and run each part separately.")
+            self.add_to_history(command, "rejected: shell operators not supported")
+            return False
         try:
             print(f"\n🚀 Executing: {command}")
             result = subprocess.run(
-                command, 
-                shell=True, 
-                capture_output=True, 
+                shlex.split(command),
+                capture_output=True,
                 text=True,
                 timeout=30
             )

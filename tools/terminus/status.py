@@ -5,7 +5,7 @@ The serial layer. Works in any terminal, no dependencies beyond stdlib.
 Serial → parallel → GUI upgrade path: this is the serial foundation.
 """
 
-import subprocess, os, sys, re, math, datetime
+import subprocess, os, sys, re, math, datetime, shlex
 from pathlib import Path
 
 # ── locate repo root ──────────────────────────────────────────────────────────
@@ -29,7 +29,8 @@ def c(color, text):
     return text if NO_COLOR else f"{color}{text}{RESET}"
 
 def sh(cmd):
-    r = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=REPO)
+    args = cmd if isinstance(cmd, list) else shlex.split(cmd)
+    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)
     return r.stdout.strip()
 
 # ── terminal width ────────────────────────────────────────────────────────────

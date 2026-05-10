@@ -61,12 +61,19 @@ def score_connections(path: Path) -> tuple[float, str]:
     # links within this doc
     outbound = len(re.findall(r'\[.+?\]\((?!http).+?\)', content))
 
-    # how many other .md files link to this one
+    # how many other .md files reference this one (pure Python — no subprocess)
     stem = path.stem
     name = path.name
-    inbound_raw = sh(['grep', '-rE', f'{name}|{stem}', '--include=*.md', '-l', '.'])
-    inbound = len([l for l in inbound_raw.splitlines() if l.strip()])
-    inbound = len([l for l in inbound_raw.splitlines() if l.strip()])
+    inbound = 0
+    for other in REPO.rglob('*.md'):
+        if other == path:
+            continue
+        try:
+            text = other.read_text(errors='ignore')
+            if name in text or stem in text:
+                inbound += 1
+        except Exception:
+            continue
 
     total = outbound + inbound
     score = min(total / 15 * 25, 25)
