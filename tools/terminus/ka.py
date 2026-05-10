@@ -40,7 +40,13 @@ def score_weight(path: Path) -> tuple[float, str]:
 def score_iterations(path: Path) -> tuple[float, str]:
     """Iteration count: git commits touching this file."""
     rel = str(path.relative_to(REPO))
-    raw = sh(f"git log --oneline -- '{rel}' | wc -l")
+    r = subprocess.run(
+        ["git", "rev-list", "--count", "HEAD", "--", rel],
+        capture_output=True,
+        text=True,
+        cwd=REPO,
+    )
+    raw = r.stdout.strip()
     count = int(raw) if raw.isdigit() else 0
     score = min(count / 20 * 25, 25)
     return round(score, 1), f"{count} commits"
