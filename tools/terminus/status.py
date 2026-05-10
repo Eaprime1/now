@@ -117,7 +117,14 @@ def ka_scores(top=6):
             recency      = 20 if age_days < 7 else (12 if age_days < 30 else (5 if age_days < 90 else 0))
 
             # git commit count for this file
-            commit_raw = sh(f"git log --oneline -- '{path.relative_to(REPO)}' | wc -l")
+            commit_proc = subprocess.run(
+                ["git", "rev-list", "--count", "HEAD", "--", str(path.relative_to(REPO))],
+                cwd=REPO,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            commit_raw = commit_proc.stdout.strip()
             commits    = int(commit_raw) if commit_raw.isdigit() else 0
             commit_score = min(commits / 15 * 30, 30)
 
