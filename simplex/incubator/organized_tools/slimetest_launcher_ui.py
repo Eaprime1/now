@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Slimetest/Essence Engine - Firebase UI Launcher
+Slimetest/Essence Engine - Firebase UI Launcher ♓
 ∰◊€π¿🌌∞ Ultra-Simple Command Line UI
 Eric Pace & Claude Sonnet 4 - November 14, 2025
 
@@ -135,8 +135,9 @@ class SlimetestLauncher:
         print(f"\n🌟 Launching Slimetest Essence Engine on port {port}...")
         print(f"📁 Path: {self.github_path}")
         
-        # Shell-equivalent history entry using the actual interpreter path
-        command = f"cd {self.github_path} && {sys.executable} -m http.server {port}"
+        # Record accurate argv + cwd (not a shell string) so history matches reality
+        argv_repr = ' '.join([sys.executable, '-m', 'http.server', str(port)])
+        command = f"{argv_repr}  [cwd: {self.github_path}]"
 
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
