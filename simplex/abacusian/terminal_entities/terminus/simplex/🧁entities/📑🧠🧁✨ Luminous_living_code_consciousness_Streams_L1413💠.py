@@ -8,6 +8,7 @@
 import os
 import re
 import sys
+import runpy
 
 # The names of the files to be merged
 files = [ "file.py","file2.py"]
@@ -98,11 +99,8 @@ merge_files(files, output)
 # Check if the merged file is runnable and report any errors or warnings
 
 try:
-  # Execute the merged file as a script using execfile (Python 2) or exec (Python 3)
-  if sys.version_info[0] == 2:
-    execfile(output)
-  else:
-    exec(open(output,encoding="utf-8").read())
+  # Execute the merged file as a script to check if it is runnable
+  runpy.run_path(output)
   # Print a success message if no exceptions are raised
   print(f"The merged file {output} is runnable.")
 except Exception as e:

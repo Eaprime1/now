@@ -16,6 +16,7 @@ import os
 import sys
 import subprocess
 import json
+import shlex
 from pathlib import Path
 from datetime import datetime
 
@@ -81,9 +82,8 @@ class SlimetestLauncher:
         try:
             print(f"\n🚀 Executing: {command}")
             result = subprocess.run(
-                command, 
-                shell=True, 
-                capture_output=True, 
+                shlex.split(command),
+                capture_output=True,
                 text=True,
                 timeout=30
             )
@@ -130,19 +130,22 @@ class SlimetestLauncher:
         print(f"📁 Path: {self.github_path}")
         
         # Python simple HTTP server
-        command = f"cd {self.github_path} && python3 -m http.server {port}"
-        
+        command = f"python3 -m http.server {port} (cwd: {self.github_path})"
+
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
         print(f"   http://127.0.0.1:{port}")
         print(f"\n⚠️  Press Ctrl+C to stop server")
         print("=" * 60)
-        
+
         self.add_to_history(command, "server_launched")
-        
+
         # Run server (blocking)
         try:
-            subprocess.run(command, shell=True)
+            subprocess.run(
+                ['python3', '-m', 'http.server', str(port)],
+                cwd=str(self.github_path)
+            )
         except KeyboardInterrupt:
             print("\n\n🛑 Server stopped by user")
             return True
