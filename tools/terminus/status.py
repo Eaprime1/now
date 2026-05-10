@@ -214,7 +214,7 @@ if __name__ == '__main__':
     if args.watch:
         import time
         while True:
-            os.system('clear')
+            print('\033[2J\033[H', end='')
             render()
             print(c(DIM, f"  refreshing every {args.watch}s — Ctrl+C to exit\n"))
             time.sleep(args.watch)
