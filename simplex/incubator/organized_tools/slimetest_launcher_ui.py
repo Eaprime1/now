@@ -87,7 +87,7 @@ class SlimetestLauncher:
             return False
         try:
             print(f"\n🚀 Executing: {command}")
-            result = subprocess.run(  # nosec B603
+            result = subprocess.run(  # nosec B603  # nosemgrep
                 shlex.split(command),
                 capture_output=True,
                 text=True,
@@ -149,7 +149,7 @@ class SlimetestLauncher:
 
         # Run server (blocking) — use sys.executable + cwd instead of shell string
         try:
-            subprocess.run(  # nosec B603 B607
+            subprocess.run(  # nosec B603 B607  # nosemgrep
                 [sys.executable, '-m', 'http.server', str(port)],
                 cwd=str(self.github_path)
             )

@@ -30,7 +30,7 @@ def c(color, text):
 
 def sh(cmd):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)  # nosec B603
+    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)  # nosec B603  # nosemgrep
     return r.stdout.strip()
 
 # ── terminal width ────────────────────────────────────────────────────────────

@@ -25,7 +25,7 @@ def c(color, text): return text if NO_COLOR else f"{color}{text}{RESET}"
 
 def sh(cmd, cwd=REPO):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)  # nosec B603
+    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)  # nosec B603  # nosemgrep
     return r.stdout.strip()
 
 # ── Ka scoring components (each 0-25 = 100 total) ────────────────────────────
@@ -55,11 +55,19 @@ def score_connections(path: Path) -> tuple[float, str]:
     # links within this doc
     outbound = len(re.findall(r'\[.+?\]\((?!http).+?\)', content))
 
-    # how many other .md files link to this one
+    # how many other .md files reference this one (pure Python — no subprocess)
     stem = path.stem
     name = path.name
-    inbound_raw = sh(['grep', '-rl', '--include=*.md', '-e', name, '-e', stem, '.'])
-    inbound = len([l for l in inbound_raw.splitlines() if l.strip()])
+    inbound = 0
+    for other in REPO.rglob('*.md'):
+        if other == path:
+            continue
+        try:
+            text = other.read_text(errors='ignore')
+            if name in text or stem in text:
+                inbound += 1
+        except OSError:
+            pass
 
     total = outbound + inbound
     score = min(total / 15 * 25, 25)
