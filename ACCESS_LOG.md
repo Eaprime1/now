@@ -1,6 +1,49 @@
-# TODAY REPO - Access Log
+# now — Access Log
 
 **Purpose:** Track sessions, changes, and concept progressions
+
+---
+
+## Session: 2026-05-06 (Identity Makeover + Terminus Activation)
+
+**Branch:** `claude/ubuntu-drive-cleaner-HAFG3`
+**Collaborators:** Eric Pace, Claude (Sonnet 4.6)
+
+### Objectives
+- Swap "today" identity to "now" across all core docs
+- Build terminus model and multi-agent framework
+- Add integration map
+- Ship first active tool (drive-cleaner)
+
+### Actions Taken
+
+#### 1. First Active Tool: `tools/drive-cleaner/` ✅
+- `clean.sh` — interactive Ubuntu disk cleaner (report/safe/deep modes)
+- `config.sh` — tunables
+- `README.md` — usage, risk table, chain-of-custody path
+- Codacy + Gemini review issues fixed (numfmt, mtime, kernel fallback, etc.)
+
+#### 2. Identity Makeover ✅
+- `README.md` — complete rewrite: today → now, terminus model, agent table, structure
+- `MISSION.md` — rewrite: terminus principle, sphincter gateway heritage
+- `ROADMAP.md` — rewrite: phased integration plan, current status
+- `AGENTS.md` — new: multi-agent guide for Claude, Copilot, Gemini, ChatGPT
+- `INTEGRATIONS.md` — new: platform map (GitHub, Drive, BBS, Vercel, Zapier, etc.)
+- `.github/AGENTS.md` — new: GitHub-native agent instructions
+
+### Key Concepts Established
+- **Terminus model** — now as airport/BBS/cable terminator
+- **Sphincter gateway heritage** — simple → specialized evolution
+- **Multi-agent collaboration** — no single agent owns now
+- **Platform presences** — THE now at every possible location
+- **Concept queue** — peer terminus for holding pattern content
+- **Content states** — raw → building → ready → shipped
+
+### Progression Note
+now is no longer a development workspace.
+It is an active terminus receiving content and routing agents.
+
+~witnessed 2026-05-06~
 
 ---
 
