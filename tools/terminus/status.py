@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-now terminus — status dashboard ♓
+now terminus — status dashboard
 The serial layer. Works in any terminal, no dependencies beyond stdlib.
 Serial → parallel → GUI upgrade path: this is the serial foundation.
 """
 
-import subprocess, os, sys, re, math, datetime, shlex  # nosec B404
+import subprocess, os, sys, re, math, datetime, shlex
 from pathlib import Path
 
 # ── locate repo root ──────────────────────────────────────────────────────────
@@ -30,7 +30,7 @@ def c(color, text):
 
 def sh(cmd):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)  # nosec B603  # nosemgrep
+    r = subprocess.run(args, capture_output=True, text=True, cwd=REPO)
     return r.stdout.strip()
 
 # ── terminal width ────────────────────────────────────────────────────────────
@@ -56,7 +56,7 @@ def bar(val, max_val=100, width=20, full='█', empty='░'):
 # ── data collectors ───────────────────────────────────────────────────────────
 
 def disk_info():
-    lines = sh(['df', '-h', '/']).splitlines()
+    lines = sh("df -h /").splitlines()
     if len(lines) < 2:
         return []
     result = []
@@ -71,7 +71,7 @@ def disk_info():
     return result
 
 def git_log(n=8):
-    raw = sh(['git', 'log', '--oneline', f'-n{n}', '--format=%h|%ae|%s|%ar'])
+    raw = sh(f"git log --oneline -n {n} --format='%h|%ae|%s|%ar'")
     entries = []
     for line in raw.splitlines():
         parts = line.split('|', 3)
@@ -83,7 +83,7 @@ def git_log(n=8):
     return entries
 
 def current_branch():
-    return sh(['git', 'branch', '--show-current'])
+    return sh("git branch --show-current")
 
 def open_missions():
     """Parse ROADMAP.md for unchecked [ ] items."""
@@ -118,13 +118,20 @@ def ka_scores(top=6):
             recency      = 20 if age_days < 7 else (12 if age_days < 30 else (5 if age_days < 90 else 0))
 
             # git commit count for this file
-            commit_raw = sh(['git', 'log', '--oneline', '--', str(path.relative_to(REPO))])
-            commits    = len([l for l in commit_raw.splitlines() if l]) if commit_raw else 0
+            commit_proc = subprocess.run(
+                ["git", "rev-list", "--count", "HEAD", "--", str(path.relative_to(REPO))],
+                cwd=REPO,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            commit_raw = commit_proc.stdout.strip()
+            commits    = int(commit_raw) if commit_raw.isdigit() else 0
             commit_score = min(commits / 15 * 30, 30)
 
             ka = size_score + link_score + recency + commit_score
             scores.append({'name': path.relative_to(REPO), 'ka': round(ka), 'commits': commits})
-        except Exception:  # nosec B112
+        except Exception:
             continue
 
     scores.sort(key=lambda x: x['ka'], reverse=True)
@@ -132,7 +139,7 @@ def ka_scores(top=6):
 
 def agent_activity():
     """Count commits per agent slug in recent history."""
-    raw = sh(['git', 'log', '--format=%ae', '-n', '50'])
+    raw = sh("git log --format='%ae' -n 50")
     counts = {}
     for email in raw.splitlines():
         slug = email.split('@')[0][:14] if email else 'unknown'

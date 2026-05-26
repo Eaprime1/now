@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Slimetest/Essence Engine - Firebase UI Launcher ♓
+Slimetest/Essence Engine - Firebase UI Launcher
 ∰◊€π¿🌌∞ Ultra-Simple Command Line UI
 Eric Pace & Claude Sonnet 4 - November 14, 2025
 
@@ -14,7 +14,7 @@ Features:
 
 import os
 import sys
-import subprocess  # nosec B404
+import subprocess
 import json
 import shlex
 from pathlib import Path
@@ -87,7 +87,7 @@ class SlimetestLauncher:
             return False
         try:
             print(f"\n🚀 Executing: {command}")
-            result = subprocess.run(  # nosec B603  # nosemgrep
+            result = subprocess.run(
                 shlex.split(command),
                 capture_output=True,
                 text=True,
@@ -135,22 +135,21 @@ class SlimetestLauncher:
         print(f"\n🌟 Launching Slimetest Essence Engine on port {port}...")
         print(f"📁 Path: {self.github_path}")
         
-        # Record accurate argv + cwd (not a shell string) so history matches reality
-        argv_repr = ' '.join([sys.executable, '-m', 'http.server', str(port)])
-        command = f"{argv_repr}  [cwd: {self.github_path}]"
-
+        # Python simple HTTP server
+        command = f"{sys.executable} -m http.server {port}"
+        
         print(f"\n🔗 Server will be available at:")
         print(f"   http://localhost:{port}")
         print(f"   http://127.0.0.1:{port}")
         print(f"\n⚠️  Press Ctrl+C to stop server")
         print("=" * 60)
-
+        
         self.add_to_history(command, "server_launched")
-
-        # Run server (blocking) — use sys.executable + cwd instead of shell string
+        
+        # Run server (blocking)
         try:
-            subprocess.run(  # nosec B603 B607  # nosemgrep
-                [sys.executable, '-m', 'http.server', str(port)],
+            subprocess.run(
+                [sys.executable, "-m", "http.server", str(port)],
                 cwd=str(self.github_path)
             )
         except KeyboardInterrupt:
@@ -219,7 +218,6 @@ class SlimetestLauncher:
                 print("\n💬 CUSTOM COMMAND EXECUTION")
                 print("=" * 60)
                 print("Paste or type your command below:")
-                print("Note: shell operators (|, &&, ;, redirects) are not supported.")
                 print("(Press Enter with empty line to cancel)")
                 command = input("\n👉 Command: ").strip()
                 

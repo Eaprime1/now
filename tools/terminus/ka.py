@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Ka Level Analyzer — now terminus ♓
+Ka Level Analyzer — now terminus
 Ka = accumulated energy/gravity of a concept or document.
 Not time-based — weight-based: iterations, connections, attention, feedback.
 When Ka reaches threshold → concept routes to next stage automatically.
 """
 
-import subprocess, re, math, datetime, argparse, os, sys, shlex  # nosec B404
+import subprocess, re, math, datetime, argparse, os, sys, shlex
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -25,7 +25,7 @@ def c(color, text): return text if NO_COLOR else f"{color}{text}{RESET}"
 
 def sh(cmd, cwd=REPO):
     args = cmd if isinstance(cmd, list) else shlex.split(cmd)
-    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)  # nosec B603  # nosemgrep
+    r = subprocess.run(args, capture_output=True, text=True, cwd=cwd)
     return r.stdout.strip()
 
 # ── Ka scoring components (each 0-25 = 100 total) ────────────────────────────
@@ -40,8 +40,14 @@ def score_weight(path: Path) -> tuple[float, str]:
 def score_iterations(path: Path) -> tuple[float, str]:
     """Iteration count: git commits touching this file."""
     rel = str(path.relative_to(REPO))
-    raw = sh(['git', 'log', '--oneline', '--', rel])
-    count = len([l for l in raw.splitlines() if l]) if raw else 0
+    r = subprocess.run(
+        ["git", "rev-list", "--count", "HEAD", "--", rel],
+        capture_output=True,
+        text=True,
+        cwd=REPO,
+    )
+    raw = r.stdout.strip()
+    count = int(raw) if raw.isdigit() else 0
     score = min(count / 20 * 25, 25)
     return round(score, 1), f"{count} commits"
 
@@ -66,8 +72,8 @@ def score_connections(path: Path) -> tuple[float, str]:
             text = other.read_text(errors='ignore')
             if name in text or stem in text:
                 inbound += 1
-        except OSError:
-            pass
+        except Exception:
+            continue
 
     total = outbound + inbound
     score = min(total / 15 * 25, 25)
