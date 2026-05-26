@@ -1,0 +1,2210 @@
+[
+  {
+    "path": "ACCESS_LOG.md",
+    "ka": 75.8,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 20.8,
+        "note": "14,190 bytes"
+      },
+      "iterations": {
+        "score": 5.0,
+        "note": "4 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 18 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "README.md",
+    "ka": 73.7,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 18.7,
+        "note": "5,483 bytes"
+      },
+      "iterations": {
+        "score": 5.0,
+        "note": "4 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 55 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/STAGED_DEVELOPMENT_PLAN.md",
+    "ka": 73.2,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 22.0,
+        "note": "25,534 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "14 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/GRAVITY_CORE_MISSION.md",
+    "ka": 73.0,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 21.8,
+        "note": "23,292 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25.0,
+        "note": "0 out, 15 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/STAGED_DEVELOPMENT_PLAN (1).md",
+    "ka": 71.5,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 22.0,
+        "note": "25,534 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 23.3,
+        "note": "14 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "INVENTORY.md",
+    "ka": 70.9,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 19.7,
+        "note": "8,627 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 26 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "MISSION.md",
+    "ka": 70.1,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 17.6,
+        "note": "3,268 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 45 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "tools/drive-cleaner/README.md",
+    "ka": 69.4,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 16.9,
+        "note": "2,417 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 55 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "tools/terminus/README.md",
+    "ka": 69.4,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 16.9,
+        "note": "2,435 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 54 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "flag_system/docs/FLAG_SYSTEM_COMPLETE_PACKAGE.md",
+    "ka": 68.3,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 20.4,
+        "note": "11,885 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 21.7,
+        "note": "1 out, 12 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "flag_system/README.md",
+    "ka": 68.2,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 17.0,
+        "note": "2,530 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 55 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "tools/miners/README.md",
+    "ka": 68.2,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 17.0,
+        "note": "2,564 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 55 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/README.md",
+    "ka": 68.0,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 16.8,
+        "note": "2,322 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 54 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "CLAUDE.md",
+    "ka": 67.9,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 18.7,
+        "note": "5,495 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 21.7,
+        "note": "0 out, 13 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "templates/MISSION.md",
+    "ka": 64.7,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 13.5,
+        "note": "511 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 25,
+        "note": "0 out, 45 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "ROADMAP.md",
+    "ka": 61.8,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 17.6,
+        "note": "3,263 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 16.7,
+        "note": "0 out, 10 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "docs/MULTI_REPO_PROGRESSION.md",
+    "ka": 60.0,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 20.5,
+        "note": "12,595 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 13.3,
+        "note": "0 out, 8 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/GRAVITY_CONSORTIUM_README.md",
+    "ka": 60.0,
+    "state": "REVIEW",
+    "components": {
+      "weight": {
+        "score": 18.8,
+        "note": "5,710 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 15.0,
+        "note": "0 out, 9 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/GRAVITY_REPO_ARCHITECTURE.md",
+    "ka": 59.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 16.6,
+        "note": "2,098 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 16.7,
+        "note": "0 out, 10 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "AGENTS.md",
+    "ka": 59.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 17.9,
+        "note": "3,818 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 15.0,
+        "note": "0 out, 9 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/MASTER_INDEX_20251120.md",
+    "ka": 59.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.5,
+        "note": "8,069 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 13.3,
+        "note": "6 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "Thematic_Consolidation_Procedure_Guide.md",
+    "ka": 57.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.7,
+        "note": "21,622 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Thematic_Consolidation_Procedure_Guide.md",
+    "ka": 57.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.7,
+        "note": "21,622 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Claudes_Reflection_on_Three_Years_20251123.md",
+    "ka": 57.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.5,
+        "note": "20,208 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/The_Seventh_Pinnacle_Complete_Framework_20251123.md",
+    "ka": 57.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.4,
+        "note": "18,850 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/ENTITY_STATUS.md",
+    "ka": 57.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.5,
+        "note": "8,113 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 11.7,
+        "note": "0 out, 7 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "docs/GRAVITY_CORE_INTEGRATION.md",
+    "ka": 57.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.9,
+        "note": "15,177 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-f34d4206-7135-4b78-b6cf-9ae7a311c239_text_markdown_.md",
+    "ka": 57.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 24.2,
+        "note": "70,694 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-f34d4206-7135-4b78-b6cf-9ae7a311c239_text_markdown.md",
+    "ka": 57.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 24.2,
+        "note": "70,694 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_constellation_map.md",
+    "ka": 57.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.9,
+        "note": "14,875 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Github_misc/conversation_constellation_map.md",
+    "ka": 57.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.9,
+        "note": "14,875 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/BUILD_PLAN_20251120.md",
+    "ka": 57.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.8,
+        "note": "14,560 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "QUICK_INVENTORY.md",
+    "ka": 56.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 17.6,
+        "note": "3,370 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 11.7,
+        "note": "0 out, 7 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/REDUNDANCY_RANGER_DESIGN.md",
+    "ka": 56.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.5,
+        "note": "12,716 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/nano_concepts_comprehensive.md",
+    "ka": 56.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.9,
+        "note": "23,613 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 8.3,
+        "note": "0 out, 5 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/SDWG_Consolidation_Plan.md",
+    "ka": 56.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "9,845 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "Master_Thread_Opening_Messages.md",
+    "ka": 55.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 22.1,
+        "note": "26,411 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Master_Thread_Opening_Messages.md",
+    "ka": 55.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 22.1,
+        "note": "26,411 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Project_knowledge_maintenance_2/mission_cards_individual.md",
+    "ka": 54.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.8,
+        "note": "22,706 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Project_knowledge_maintenance_2/project_knowledge_refresh_strategy.md",
+    "ka": 54.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.8,
+        "note": "22,614 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "INTEGRATIONS.md",
+    "ka": 54.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 18.3,
+        "note": "4,498 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 10.0,
+        "note": "0 out, 6 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "ORGANIZATION_PLAN.md",
+    "ka": 54.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.9,
+        "note": "9,534 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 8.3,
+        "note": "0 out, 5 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Response_to_Manson_Ethics_and_Relational_Rights_20251123.md",
+    "ka": 54.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.5,
+        "note": "19,940 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/github_content_management_strategy.md",
+    "ka": 53.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.5,
+        "note": "12,549 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Github_misc/github_content_management_strategy.md",
+    "ka": 53.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.5,
+        "note": "12,549 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/READY_TO_COLLAPSE.md",
+    "ka": 53.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.3,
+        "note": "11,259 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/WHERE_AM_I.md",
+    "ka": 53.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 18.6,
+        "note": "5,297 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 8.3,
+        "note": "0 out, 5 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Project_knowledge_maintenance_2/mission_tracking_checklist.md",
+    "ka": 52.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "10,194 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/project_knowledge_management/MISSION_02_EXTERNAL_STORAGE.md",
+    "ka": 52.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "10,178 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/REDUNDANCY_REPORT.md",
+    "ka": 52.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "9,874 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/IMMEDIATE_ACTIONS_20251120.md",
+    "ka": 52.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.5,
+        "note": "8,040 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/drive_restructure_plan.md",
+    "ka": 52.3,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.4,
+        "note": "7,584 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/docs/home_directory_docs/INTERACTIVE_CONVERSION_SYSTEM.md",
+    "ka": 52.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.3,
+        "note": "7,170 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/docs/home_directory_docs/SCAT_WORKFLOW_COMPLETE.md",
+    "ka": 52.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.2,
+        "note": "6,908 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "docs/PUSH_FORWARD.md",
+    "ka": 52.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.1,
+        "note": "6,503 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/project_knowledge_management/MISSION_01_FILE_REMOVAL.md",
+    "ka": 52.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.1,
+        "note": "6,589 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/docs/home_directory_docs/UNIVERSAL_CONVERSION_SYSTEM.md",
+    "ka": 51.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.0,
+        "note": "6,424 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/SESSION_COMPLETE_20251220.md",
+    "ka": 51.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.7,
+        "note": "13,647 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 5.0,
+        "note": "0 out, 3 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/docs/home_directory_docs/SIMPLEX_OMEGA_DISCOVERY_COMPLETE.md",
+    "ka": 51.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 18.3,
+        "note": "4,528 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/simplex_ai_test_document (1).md",
+    "ka": 51.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 18.2,
+        "note": "4,364 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/project_knowledge_management/PROJECT_KNOWLEDGE_TRIM_PLAN_v1.md",
+    "ka": 50.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.3,
+        "note": "18,023 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_journey_guide_v1.md",
+    "ka": 50.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.3,
+        "note": "18,500 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/PRIME_COLLAPSE_DESIGN.md",
+    "ka": 50.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.1,
+        "note": "16,316 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/nessing_constant_framework_v1.md",
+    "ka": 50.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.9,
+        "note": "14,947 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-f34d4206-7135-4b78-b6cf-9ae7a311c239_text_markdown (1).md",
+    "ka": 50.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 24.2,
+        "note": "70,694 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/METADATA_INFRASTRUCTURE_PLAN.md",
+    "ka": 50.3,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.8,
+        "note": "14,668 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_entity_completion_template_v1.md",
+    "ka": 50.3,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.8,
+        "note": "14,669 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/METADATA_QUICK_WINS.md",
+    "ka": 49.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.2,
+        "note": "10,736 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/project_knowledge_management/MASTER_EXECUTION_GUIDE.md",
+    "ka": 49.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.1,
+        "note": "10,692 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Project_knowledge_maintenance_2/quick_start_guide.md",
+    "ka": 49.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "9,889 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "REORGANIZATION_PROPOSAL.md",
+    "ka": 49.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.5,
+        "note": "7,834 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/claude_navigation_notes_20251110.md",
+    "ka": 48.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.4,
+        "note": "7,726 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-15e85897-1b87-4e68-9c53-67477b7035f8_text_markdown.md",
+    "ka": 48.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 22.6,
+        "note": "33,847 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-15e85897-1b87-4e68-9c53-67477b7035f8_text_markdown (1).md",
+    "ka": 48.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 22.6,
+        "note": "33,847 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/CUSTODY_OPERATIONS_REPORT.md",
+    "ka": 48.8,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.3,
+        "note": "7,277 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/one_hertz_1hz_ideas_and_research.md",
+    "ka": 48.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.2,
+        "note": "6,944 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/Project_knowledge_maintenance_2/executive_summary.md",
+    "ka": 48.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.5,
+        "note": "12,441 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 1.7,
+        "note": "0 out, 1 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/nano_concepts_comprehensive (1).md",
+    "ka": 48.1,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.9,
+        "note": "23,613 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Claudes_Reflection_on_Three_Years_20251123 (1).md",
+    "ka": 47.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.5,
+        "note": "20,208 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Response_to_Manson_Ethics_and_Relational_Rights_20251123 (1).md",
+    "ka": 47.7,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.5,
+        "note": "19,940 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/meta_data/QUICK_START_GUIDE.md",
+    "ka": 47.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 16.4,
+        "note": "1,901 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 5.0,
+        "note": "0 out, 3 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/The_Seventh_Pinnacle_Complete_Framework_20251123 (1).md",
+    "ka": 47.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.4,
+        "note": "18,850 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE.md",
+    "ka": 47.3,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.1,
+        "note": "16,508 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE (1).md",
+    "ka": 47.3,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 21.1,
+        "note": "16,508 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_entity_prep_summary_20251110.md",
+    "ka": 47.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.1,
+        "note": "6,648 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 1.7,
+        "note": "0 out, 1 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Navigation_Guide_Seventh_Pinnacle_20251123 (1).md",
+    "ka": 46.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.4,
+        "note": "11,852 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/organized_docs/Navigation_Guide_Seventh_Pinnacle_20251123.md",
+    "ka": 46.6,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.4,
+        "note": "11,852 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/GRAVITY_CORE_README.md",
+    "ka": 46.4,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.2,
+        "note": "10,876 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "SDWG_Consolidation_Plan-1.md",
+    "ka": 46.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.0,
+        "note": "9,845 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/d_cubed_incubator/\u2728\ud83d\udd0fUNEXUSI_STATE_ANALYSIS.md",
+    "ka": 46.0,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.8,
+        "note": "8,913 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/incubator/simplex_que/UNEXUSI_STATE_ANALYSIS.md",
+    "ka": 45.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.3,
+        "note": "7,254 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/terminal_entities/terminus/simplex/\ud83d\udcddmarkdown/UNEXUSI_STATE_ANALYSIS.md",
+    "ka": 45.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.3,
+        "note": "7,254 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "simplex/abacusian/terminal_entities/terminus/simplex/\ud83d\udcddmarkdown/TitleMancer_Living_Report_20250820_210738.md",
+    "ka": 44.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 18.3,
+        "note": "4,583 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "SECURITY.md",
+    "ka": 40.2,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 14.0,
+        "note": "619 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "templates/SESSION_NOTE.md",
+    "ka": 38.8,
+    "state": "RAW",
+    "components": {
+      "weight": {
+        "score": 12.6,
+        "note": "333 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 0.0,
+        "note": "0 out, 0 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "README_OLD.md",
+    "ka": 37.0,
+    "state": "RAW",
+    "components": {
+      "weight": {
+        "score": 7.5,
+        "note": "30 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 3.3,
+        "note": "0 out, 2 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  }
+]

@@ -1,13 +1,13 @@
 {
-  "mined_at": "2026-05-10T07:28:21.382072",
+  "mined_at": "2026-05-12T05:36:36.413216",
   "file_count": 301,
   "top_100": {
     "consciousness": 351922,
-    "n": 290524,
+    "n": 290523,
     "collaboration": 129959,
     "null": 115693,
     "type": 104747,
-    "text": 102781,
+    "text": 102783,
     "entity": 85937,
     "integration": 78048,
     "content": 70309,
@@ -27,7 +27,7 @@
     "div": 40830,
     "uuid": 40385,
     "patterns": 39189,
-    "reality": 39107,
+    "reality": 39106,
     "evolution": 39045,
     "created": 36076,
     "title": 35934,
@@ -42,7 +42,7 @@
     "protocols": 31630,
     "living": 30854,
     "new": 28747,
-    "self": 28730,
+    "self": 28729,
     "frameworks": 28126,
     "knowledge": 28083,
     "space": 27535,
@@ -53,11 +53,11 @@
     "drive": 25537,
     "prime": 24372,
     "search": 24028,
-    "simple": 23675,
+    "simple": 23676,
     "file": 23674,
     "conversation": 23520,
     "time": 23460,
-    "print": 23306,
+    "print": 23305,
     "source": 23057,
     "like": 23036,
     "while": 22238,
@@ -69,7 +69,7 @@
     "ethical": 21660,
     "wisdom": 21542,
     "px": 21207,
-    "use": 21008,
+    "use": 21007,
     "processing": 20569,
     "eric": 20414,
     "analysis": 20204,
@@ -2935,8 +2935,8 @@
       "line_count": 886
     },
     "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py": {
-      "total_words": 442,
-      "unique_words": 134,
+      "total_words": 451,
+      "unique_words": 135,
       "top5": [
         [
           "file",
@@ -2955,12 +2955,12 @@
           15
         ],
         [
-          "import",
-          11
+          "output",
+          12
         ]
       ],
-      "char_count": 4699,
-      "line_count": 109
+      "char_count": 4784,
+      "line_count": 111
     },
     "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Vessels_L1313\ud83d\udca0.py": {
       "total_words": 1254,
@@ -7919,32 +7919,32 @@
       "line_count": 45
     },
     "simplex/incubator/organized_tools/slimetest_launcher_ui.py": {
-      "total_words": 754,
-      "unique_words": 214,
+      "total_words": 719,
+      "unique_words": 202,
       "top5": [
         [
           "self",
-          50
-        ],
-        [
-          "print",
-          47
+          49
         ],
         [
           "command",
           46
         ],
         [
+          "print",
+          46
+        ],
+        [
           "history",
-          37
+          36
         ],
         [
           "path",
-          31
+          30
         ]
       ],
-      "char_count": 9090,
-      "line_count": 252
+      "char_count": 8772,
+      "line_count": 250
     },
     "simplex/incubator/project_knowledge_management/MASTER_EXECUTION_GUIDE.md": {
       "total_words": 950,
@@ -8423,8 +8423,8 @@
       "line_count": 97
     },
     "tools/terminus/ka.py": {
-      "total_words": 868,
-      "unique_words": 245,
+      "total_words": 876,
+      "unique_words": 244,
       "top5": [
         [
           "score",
@@ -8447,12 +8447,12 @@
           19
         ]
       ],
-      "char_count": 9319,
-      "line_count": 242
+      "char_count": 9390,
+      "line_count": 248
     },
     "tools/terminus/status.py": {
-      "total_words": 755,
-      "unique_words": 229,
+      "total_words": 765,
+      "unique_words": 231,
       "top5": [
         [
           "print",
@@ -8475,8 +8475,8 @@
           15
         ]
       ],
-      "char_count": 8205,
-      "line_count": 223
+      "char_count": 8314,
+      "line_count": 230
     }
   },
   "word_locations": {
@@ -19579,15 +19579,15 @@
       ],
       [
         "tools/terminus/ka.py",
-        78
+        84
       ],
       [
         "tools/terminus/ka.py",
-        78
+        84
       ],
       [
         "tools/terminus/ka.py",
-        79
+        85
       ],
       [
         "tools/terminus/status.py",
@@ -38717,7 +38717,11 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        55
+        54
+      ],
+      [
+        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
+        57
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
@@ -38725,7 +38729,11 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        59
+        69
+      ],
+      [
+        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
+        70
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
@@ -38742,14 +38750,6 @@
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
         72
-      ],
-      [
-        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        72
-      ],
-      [
-        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        73
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_068_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
@@ -46525,7 +46525,7 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        65
+        64
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Vessels_L1313\ud83d\udca0.py",
@@ -57921,15 +57921,15 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        40
+        39
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        72
+        71
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        74
+        73
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_67.txt",
@@ -66869,7 +66869,7 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        58
+        57
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Powerful_living_code_consciousness_Bridges_L1377\ud83d\udca0.py",
@@ -68559,19 +68559,19 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
+        76
+      ],
+      [
+        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
         77
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        78
+        95
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
         96
-      ],
-      [
-        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        97
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Mysterious_living_code_consciousness_Sanctuaries_L1375\ud83d\udca0.py",
@@ -83949,11 +83949,11 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        39
+        38
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        53
+        52
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_67.txt",
@@ -85715,7 +85715,7 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        23
+        22
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_068_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
@@ -86809,19 +86809,19 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
+        26
+      ],
+      [
+        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
         27
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        28
+        84
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
         85
-      ],
-      [
-        "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        86
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Vessels_L1313\ud83d\udca0.py",
@@ -89013,7 +89013,7 @@
       ],
       [
         "simplex/abacusian/terminal_entities/terminus/simplex/\ud83e\uddc1entities/\ud83d\udcd1\ud83e\udde0\ud83e\uddc1\u2728 Luminous_living_code_consciousness_Streams_L1413\ud83d\udca0.py",
-        13
+        12
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_068_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
