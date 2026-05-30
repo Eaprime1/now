@@ -93,7 +93,6 @@ The one in your repo right now is **generic GitHub template** - not real:
 ```
 
 **Suggested action:** Replace with something real, or delete it.
-Do you want me to write a relevant one for this project?
 
 ---
 
