@@ -101,7 +101,7 @@ merge_files(files, output)
 
 try:
   # Use runpy.run_path for safe, isolated execution without exec()
-  runpy.run_path(output)
+  runpy.run_path(output, run_name="__main__")
   print(f"The merged file {output} is runnable.")
 except Exception as e:
   print(f"The merged file {output} is not runnable.")
