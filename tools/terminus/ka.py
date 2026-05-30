@@ -4,6 +4,7 @@ Ka Level Analyzer — now terminus
 Ka = accumulated energy/gravity of a concept or document.
 Not time-based — weight-based: iterations, connections, attention, feedback.
 When Ka reaches threshold → concept routes to next stage automatically.
+🃏 ~witnessed 2026-05-30~ — security hardened: shlex+shell=False, pure-Python inbound scan
 """
 
 import subprocess, re, math, datetime, argparse, os, sys, shlex
@@ -201,6 +202,11 @@ def print_summary(results: list, verbose=False):
     print()
 
 # ── entry ─────────────────────────────────────────────────────────────────────
+
+# ── seeds for next iteration ──────────────────────────────────────────────────
+# seed: Ka threshold crossing → auto-open GitHub issue for review routing
+# seed: add "momentum" component — Ka velocity (rate of change) not just Ka level
+# seed: concept-queue integration — auto-file low-Ka docs when Ka < 20 for 7+ days
 
 if __name__ == '__main__':
     import json as _json
