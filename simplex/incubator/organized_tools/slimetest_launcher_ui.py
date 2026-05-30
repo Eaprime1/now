@@ -10,6 +10,8 @@ Features:
 - Command history persistence
 - Copy/paste command execution
 - No multiple instance spawning
+
+🃏 ~witnessed 2026-05-30~ — security hardened: shlex+shell=False, operator guard, cwd param
 """
 
 import os
@@ -243,6 +245,11 @@ class SlimetestLauncher:
                 
             else:
                 print("❌ Invalid option!")
+
+# ── seeds for next iteration ──────────────────────────────────────────────────
+# seed: add allow-list mode for trusted compound commands (user-confirmable)
+# seed: port validation — refuse reserved ports (<1024) unless sudo confirmed
+# seed: integrate with terminus status — show server as active agent in dashboard
 
 if __name__ == '__main__':
     print("🌟 Initializing Slimetest Launcher UI...")

@@ -3,6 +3,7 @@
 now terminus — status dashboard
 The serial layer. Works in any terminal, no dependencies beyond stdlib.
 Serial → parallel → GUI upgrade path: this is the serial foundation.
+🃏 ~witnessed 2026-05-30~ — security hardened: shlex+shell=False, ANSI clear
 """
 
 import subprocess, os, sys, re, math, datetime, shlex
@@ -211,6 +212,11 @@ def render():
     print()
 
 # ── entry ─────────────────────────────────────────────────────────────────────
+
+# ── seeds for next iteration ──────────────────────────────────────────────────
+# seed: add --json output mode to feed Ka scores into concept-queue automation
+# seed: surface not_safe signals (stalled terminus, no recent commits) in dashboard
+# seed: integrate Codacy/security score as a Ka component
 
 if __name__ == '__main__':
     import argparse
