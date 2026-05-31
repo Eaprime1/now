@@ -4,10 +4,12 @@
 # It uses a prefix for the functions based on the file name
 # It handles different types of import statements and only replaces the imports if there is a matching python file to be merged
 # It also checks if the merged file is runnable and reports any errors or warnings
+# 🃏 ~witnessed 2026-05-30~ — security: exec→runpy, seeds planted
 
 import os
 import re
 import sys
+import runpy
 
 # The names of the files to be merged
 files = [ "file.py","file2.py"]
@@ -98,15 +100,15 @@ merge_files(files, output)
 # Check if the merged file is runnable and report any errors or warnings
 
 try:
-  # Execute the merged file as a script using execfile (Python 2) or exec (Python 3)
-  if sys.version_info[0] == 2:
-    execfile(output)
-  else:
-    exec(open(output,encoding="utf-8").read())
-  # Print a success message if no exceptions are raised
+  # Use runpy.run_path for safe, isolated execution without exec()
+  runpy.run_path(output, run_name="__main__")
   print(f"The merged file {output} is runnable.")
 except Exception as e:
-  # Print the exception type and message if any exceptions are raised
   print(f"The merged file {output} is not runnable.")
   print(f"Exception type: {type(e).__name__}")
   print(f"Exception message: {e}")
+
+# ── seeds for next iteration ──────────────────────────────────────────────────
+# seed: add collision detection when function names clash across merged files
+# seed: support merging files from different directories with path normalization
+# seed: route merged output Ka score → concept-queue when Ka > 60
