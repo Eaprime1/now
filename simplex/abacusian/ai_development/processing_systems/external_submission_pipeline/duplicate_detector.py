@@ -13,7 +13,7 @@ def calculate_file_hash(file_path):
     """Calculate MD5 hash of file"""
     try:
         with open(file_path, 'rb') as f:
-            return hashlib.md5(f.read()).hexdigest()
+            return hashlib.md5(f.read(), usedforsecurity=False).hexdigest()
     except:
         return None
 

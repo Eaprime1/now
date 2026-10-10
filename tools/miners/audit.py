@@ -48,7 +48,7 @@ def extract_links(text: str) -> list[str]:
 
 def file_hash(path: Path) -> str:
     try:
-        return hashlib.md5(path.read_bytes()).hexdigest()
+        return hashlib.md5(path.read_bytes(), usedforsecurity=False).hexdigest()
     except:
         return ''
 
