@@ -45,7 +45,7 @@
 ## 🔑 API Key Integration
 
 ### Your Pre-Configured Settings:
-- **API Key**: `AIzaSyC3XqaPZoHX_I7OYFmiAd1SHEAsmwpkC0A`
+- **API Key**: `REDACTED_GOOGLE_API_KEY`
 - **Default Folder**: `1AQxd2QcAPqqz_phUvinTy1OSCnQ298A-`
 - **Enhanced Features**: Automatically enabled
 
