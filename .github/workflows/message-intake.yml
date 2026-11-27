@@ -154,11 +154,13 @@ jobs:
             });
 
       - name: Commit archived message
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           git config user.name  "terminus-intake[bot]"
           git config user.email "terminus@now"
           git add .intake/ 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "archive: intake #${{ github.event.issue.number }} ~witnessed $(date -u +%Y-%m-%d)~"
+          git diff --cached --quiet || git commit -m "archive: intake #${ISSUE_NUMBER} ~witnessed $(date -u +%Y-%m-%d)~"
           git push || true
 
       - name: Add state label

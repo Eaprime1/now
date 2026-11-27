@@ -14,7 +14,9 @@ def calculate_file_hash(file_path):
     try:
         with open(file_path, 'rb') as f:
             return hashlib.md5(f.read(), usedforsecurity=False).hexdigest()
-    except:
+    except OSError:
+        # Unreadable file: skip it. Any other error (for example a TypeError
+        # from usedforsecurity on Python 3.8) should be loud, not swallowed.
         return None
 
 def find_duplicates():
