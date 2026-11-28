@@ -32,6 +32,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      # audit.py needs Python 3.9+ (list[str] annotations, hashlib usedforsecurity).
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Run lexeme miner
         run: |
           mkdir -p .miners
