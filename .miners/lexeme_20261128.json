@@ -1,5 +1,5 @@
 {
-  "mined_at": "2026-11-28T10:25:28.194791",
+  "mined_at": "2026-11-28T15:04:54.568476",
   "file_count": 301,
   "top_100": {
     "consciousness": 351922,
@@ -1559,7 +1559,7 @@
           11
         ]
       ],
-      "char_count": 6609,
+      "char_count": 6593,
       "line_count": 228
     },
     "simplex/abacusian/docs/home_directory_docs/SCAT_WORKFLOW_COMPLETE.md": {
@@ -4811,8 +4811,8 @@
       "line_count": 419
     },
     "simplex/incubator/archive_sorted_conversations/conversations_67.txt": {
-      "total_words": 125523,
-      "unique_words": 8215,
+      "total_words": 125521,
+      "unique_words": 8213,
       "top5": [
         [
           "consciousness",
@@ -4835,7 +4835,7 @@
           1163
         ]
       ],
-      "char_count": 1677888,
+      "char_count": 1677864,
       "line_count": 8201
     },
     "simplex/incubator/archive_sorted_conversations/conversations_chunk_042_10items_20250816_004058_json_(javascript_object_notation)_text.txt": {
@@ -4867,8 +4867,8 @@
       "line_count": 1612
     },
     "simplex/incubator/archive_sorted_conversations/conversations_chunk_067_10items_20250816_004058_json_(javascript_object_notation)_text.txt": {
-      "total_words": 125622,
-      "unique_words": 8218,
+      "total_words": 125620,
+      "unique_words": 8216,
       "top5": [
         [
           "consciousness",
@@ -4891,7 +4891,7 @@
           1163
         ]
       ],
-      "char_count": 1679321,
+      "char_count": 1679297,
       "line_count": 8229
     },
     "simplex/incubator/archive_sorted_conversations/conversations_chunk_068_10items_20250816_004058_json_(javascript_object_notation)_text.txt": {
@@ -82724,8 +82724,16 @@
         4189
       ],
       [
+        "simplex/incubator/archive_sorted_conversations/conversations_67.txt",
+        6883
+      ],
+      [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_067_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
         4205
+      ],
+      [
+        "simplex/incubator/archive_sorted_conversations/conversations_chunk_067_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
+        6899
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_080_10items_20250816_004058_json_(javascript_object_notation)_text (1).txt",
@@ -82877,14 +82885,6 @@
       ],
       [
         "simplex/incubator/archive_sorted_conversations/conversations_chunk_092_10items_20250816_004058_json_(javascript_object_notation)_text (1).txt",
-        4831
-      ],
-      [
-        "simplex/incubator/archive_sorted_conversations/conversations_chunk_092_10items_20250816_004058_json_(javascript_object_notation)_text (1).txt",
-        10288
-      ],
-      [
-        "simplex/incubator/archive_sorted_conversations/conversations_chunk_092_10items_20250816_004058_json_(javascript_object_notation)_text.txt",
         4831
       ]
     ],

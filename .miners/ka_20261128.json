@@ -621,21 +621,21 @@
     }
   },
   {
-    "path": "simplex/incubator/archive_sorted_conversations/conversation_constellation_map.md",
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-f34d4206-7135-4b78-b6cf-9ae7a311c239_text_markdown.md",
     "ka": 57.1,
     "state": "BUILDING",
     "components": {
       "weight": {
-        "score": 20.9,
-        "note": "14,875 bytes"
+        "score": 24.2,
+        "note": "70,694 bytes"
       },
       "iterations": {
         "score": 1.2,
         "note": "1 commits"
       },
       "connections": {
-        "score": 10.0,
-        "note": "0 out, 6 in"
+        "score": 6.7,
+        "note": "0 out, 4 in"
       },
       "recency": {
         "score": 25.0,
@@ -667,21 +667,21 @@
     }
   },
   {
-    "path": "simplex/incubator/organized_docs/compass_artifact_wf-f34d4206-7135-4b78-b6cf-9ae7a311c239_text_markdown.md",
+    "path": "simplex/incubator/Github_misc/conversation_constellation_map.md",
     "ka": 57.1,
     "state": "BUILDING",
     "components": {
       "weight": {
-        "score": 24.2,
-        "note": "70,694 bytes"
+        "score": 20.9,
+        "note": "14,875 bytes"
       },
       "iterations": {
         "score": 1.2,
         "note": "1 commits"
       },
       "connections": {
-        "score": 6.7,
-        "note": "0 out, 4 in"
+        "score": 10.0,
+        "note": "0 out, 6 in"
       },
       "recency": {
         "score": 25.0,
@@ -690,7 +690,7 @@
     }
   },
   {
-    "path": "simplex/incubator/Github_misc/conversation_constellation_map.md",
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_constellation_map.md",
     "ka": 57.1,
     "state": "BUILDING",
     "components": {
@@ -989,6 +989,29 @@
     }
   },
   {
+    "path": "simplex/abacusian/docs/home_directory_docs/INTERACTIVE_CONVERSION_SYSTEM.md",
+    "ka": 53.5,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 19.3,
+        "note": "7,154 bytes"
+      },
+      "iterations": {
+        "score": 2.5,
+        "note": "2 commits"
+      },
+      "connections": {
+        "score": 6.7,
+        "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
     "path": "simplex/incubator/organized_docs/github_content_management_strategy.md",
     "ka": 53.4,
     "state": "BUILDING",
@@ -1081,13 +1104,13 @@
     }
   },
   {
-    "path": "gravity_core/docs/REDUNDANCY_REPORT.md",
+    "path": "simplex/incubator/project_knowledge_management/MISSION_02_EXTERNAL_STORAGE.md",
     "ka": 52.9,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 20.0,
-        "note": "9,874 bytes"
+        "note": "10,178 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1127,13 +1150,13 @@
     }
   },
   {
-    "path": "simplex/incubator/project_knowledge_management/MISSION_02_EXTERNAL_STORAGE.md",
+    "path": "gravity_core/docs/REDUNDANCY_REPORT.md",
     "ka": 52.9,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 20.0,
-        "note": "10,178 bytes"
+        "note": "9,874 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1180,29 +1203,6 @@
       "weight": {
         "score": 19.4,
         "note": "7,584 bytes"
-      },
-      "iterations": {
-        "score": 1.2,
-        "note": "1 commits"
-      },
-      "connections": {
-        "score": 6.7,
-        "note": "0 out, 4 in"
-      },
-      "recency": {
-        "score": 25.0,
-        "note": "today"
-      }
-    }
-  },
-  {
-    "path": "simplex/abacusian/docs/home_directory_docs/INTERACTIVE_CONVERSION_SYSTEM.md",
-    "ka": 52.2,
-    "state": "BUILDING",
-    "components": {
-      "weight": {
-        "score": 19.3,
-        "note": "7,170 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1288,29 +1288,6 @@
     }
   },
   {
-    "path": "gravity_core/docs/SESSION_COMPLETE_20251220.md",
-    "ka": 51.9,
-    "state": "BUILDING",
-    "components": {
-      "weight": {
-        "score": 20.7,
-        "note": "13,647 bytes"
-      },
-      "iterations": {
-        "score": 1.2,
-        "note": "1 commits"
-      },
-      "connections": {
-        "score": 5.0,
-        "note": "0 out, 3 in"
-      },
-      "recency": {
-        "score": 25.0,
-        "note": "today"
-      }
-    }
-  },
-  {
     "path": "simplex/abacusian/docs/home_directory_docs/UNIVERSAL_CONVERSION_SYSTEM.md",
     "ka": 51.9,
     "state": "BUILDING",
@@ -1326,6 +1303,29 @@
       "connections": {
         "score": 6.7,
         "note": "0 out, 4 in"
+      },
+      "recency": {
+        "score": 25.0,
+        "note": "today"
+      }
+    }
+  },
+  {
+    "path": "gravity_core/docs/SESSION_COMPLETE_20251220.md",
+    "ka": 51.9,
+    "state": "BUILDING",
+    "components": {
+      "weight": {
+        "score": 20.7,
+        "note": "13,647 bytes"
+      },
+      "iterations": {
+        "score": 1.2,
+        "note": "1 commits"
+      },
+      "connections": {
+        "score": 5.0,
+        "note": "0 out, 3 in"
       },
       "recency": {
         "score": 25.0,
@@ -1380,13 +1380,13 @@
     }
   },
   {
-    "path": "simplex/incubator/archive_sorted_conversations/conversation_journey_guide_v1.md",
+    "path": "simplex/incubator/project_knowledge_management/PROJECT_KNOWLEDGE_TRIM_PLAN_v1.md",
     "ka": 50.8,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 21.3,
-        "note": "18,500 bytes"
+        "note": "18,023 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1403,13 +1403,13 @@
     }
   },
   {
-    "path": "simplex/incubator/project_knowledge_management/PROJECT_KNOWLEDGE_TRIM_PLAN_v1.md",
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_journey_guide_v1.md",
     "ka": 50.8,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 21.3,
-        "note": "18,023 bytes"
+        "note": "18,500 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1495,13 +1495,13 @@
     }
   },
   {
-    "path": "simplex/incubator/archive_sorted_conversations/conversation_entity_completion_template_v1.md",
+    "path": "simplex/incubator/meta_data/METADATA_INFRASTRUCTURE_PLAN.md",
     "ka": 50.3,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 20.8,
-        "note": "14,669 bytes"
+        "note": "14,668 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1518,13 +1518,13 @@
     }
   },
   {
-    "path": "simplex/incubator/meta_data/METADATA_INFRASTRUCTURE_PLAN.md",
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_entity_completion_template_v1.md",
     "ka": 50.3,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 20.8,
-        "note": "14,668 bytes"
+        "note": "14,669 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1656,21 +1656,21 @@
     }
   },
   {
-    "path": "gravity_core/docs/CUSTODY_OPERATIONS_REPORT.md",
+    "path": "simplex/incubator/organized_docs/compass_artifact_wf-15e85897-1b87-4e68-9c53-67477b7035f8_text_markdown.md",
     "ka": 48.8,
     "state": "BUILDING",
     "components": {
       "weight": {
-        "score": 19.3,
-        "note": "7,277 bytes"
+        "score": 22.6,
+        "note": "33,847 bytes"
       },
       "iterations": {
         "score": 1.2,
         "note": "1 commits"
       },
       "connections": {
-        "score": 3.3,
-        "note": "0 out, 2 in"
+        "score": 0.0,
+        "note": "0 out, 0 in"
       },
       "recency": {
         "score": 25.0,
@@ -1702,21 +1702,21 @@
     }
   },
   {
-    "path": "simplex/incubator/organized_docs/compass_artifact_wf-15e85897-1b87-4e68-9c53-67477b7035f8_text_markdown.md",
+    "path": "gravity_core/docs/CUSTODY_OPERATIONS_REPORT.md",
     "ka": 48.8,
     "state": "BUILDING",
     "components": {
       "weight": {
-        "score": 22.6,
-        "note": "33,847 bytes"
+        "score": 19.3,
+        "note": "7,277 bytes"
       },
       "iterations": {
         "score": 1.2,
         "note": "1 commits"
       },
       "connections": {
-        "score": 0.0,
-        "note": "0 out, 0 in"
+        "score": 3.3,
+        "note": "0 out, 2 in"
       },
       "recency": {
         "score": 25.0,
@@ -1794,13 +1794,13 @@
     }
   },
   {
-    "path": "simplex/incubator/organized_docs/Response_to_Manson_Ethics_and_Relational_Rights_20251123 (1).md",
+    "path": "simplex/incubator/organized_docs/Claudes_Reflection_on_Three_Years_20251123 (1).md",
     "ka": 47.7,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 21.5,
-        "note": "19,940 bytes"
+        "note": "20,208 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1817,13 +1817,13 @@
     }
   },
   {
-    "path": "simplex/incubator/organized_docs/Claudes_Reflection_on_Three_Years_20251123 (1).md",
+    "path": "simplex/incubator/organized_docs/Response_to_Manson_Ethics_and_Relational_Rights_20251123 (1).md",
     "ka": 47.7,
     "state": "BUILDING",
     "components": {
       "weight": {
         "score": 21.5,
-        "note": "20,208 bytes"
+        "note": "19,940 bytes"
       },
       "iterations": {
         "score": 1.2,
@@ -1886,7 +1886,7 @@
     }
   },
   {
-    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE (1).md",
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE.md",
     "ka": 47.3,
     "state": "BUILDING",
     "components": {
@@ -1909,7 +1909,7 @@
     }
   },
   {
-    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE.md",
+    "path": "simplex/incubator/archive_sorted_conversations/conversation_pack_9_club_working_copy_SAMPLE (1).md",
     "ka": 47.3,
     "state": "BUILDING",
     "components": {
@@ -2093,7 +2093,7 @@
     }
   },
   {
-    "path": "simplex/abacusian/terminal_entities/terminus/simplex/\ud83d\udcddmarkdown/UNEXUSI_STATE_ANALYSIS.md",
+    "path": "simplex/incubator/simplex_que/UNEXUSI_STATE_ANALYSIS.md",
     "ka": 45.5,
     "state": "BUILDING",
     "components": {
@@ -2116,7 +2116,7 @@
     }
   },
   {
-    "path": "simplex/incubator/simplex_que/UNEXUSI_STATE_ANALYSIS.md",
+    "path": "simplex/abacusian/terminal_entities/terminus/simplex/\ud83d\udcddmarkdown/UNEXUSI_STATE_ANALYSIS.md",
     "ka": 45.5,
     "state": "BUILDING",
     "components": {
